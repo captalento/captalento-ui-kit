@@ -9,11 +9,8 @@
 ## Components
 
 - [x] Button
-- [x] CheckBox
 - [x] Input
-- [x] Modal
-- [x] Radio
-- [x] Separator
+- [x] Card
 
 ## Techs
 

@@ -1,6 +1,6 @@
 {
   "name": "captalento-ui-kit",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "Isaias Mendes",
   "description": "Componentes do site captalento",
   "main": "dist/index.js",
