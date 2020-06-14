@@ -13,6 +13,7 @@ export interface CardProps {
 
 export const Card: React.FC<CardProps> = ({
   children,
+  courseName,
   buttonName,
   duration,
   level,
@@ -32,7 +33,7 @@ export const Card: React.FC<CardProps> = ({
     <CardComponent>
       <Container color={color}>
         <header></header>
-        <h3>HTML5</h3>
+        <h3>{courseName}</h3>
         <picture>{children}</picture>
         <div>
           <p>
