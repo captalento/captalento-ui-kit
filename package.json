@@ -1,6 +1,6 @@
 {
   "name": "captalento-ui-kit",
-  "version": "1.0.5",
+  "version": "1.0.10",
   "author": "Isaias Mendes",
   "description": "Componentes do site captalento",
   "main": "dist/index.js",
@@ -9,16 +9,16 @@
   ],
   "license": "MIT",
   "scripts": {
-    "storybook": "start-storybook -p 8080",
+    "storybook": "start-storybook -p 8090",
     "build": "tsc -p ."
   },
   "dependencies": {
     "polished": "^3.5.1",
-    "styled-components": "^5.1.0"
+    "styled-components": "^5.1.0",
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27"
   },
   "devDependencies": {
-    "@emotion/core": "^10.0.28",
-    "@emotion/styled": "^10.0.27",
     "@storybook/addon-centered": "^5.3.18",
     "@storybook/addon-info": "^5.3.18",
     "@storybook/react": "^5.3.18",

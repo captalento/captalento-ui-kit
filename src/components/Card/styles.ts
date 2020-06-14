@@ -23,6 +23,7 @@ export const Container = styled.div<ContainerProps>`
   position: relative;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
+  height: 338px;
 
   header {
     position: absolute;
