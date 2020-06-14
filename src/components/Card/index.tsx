@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Container, Level, MainLevel } from "./styles";
+import { CardComponent, Container, Level, MainLevel } from "./styles";
 import Clock from "./clock";
 
 export interface CardProps {
@@ -29,18 +29,20 @@ export const Card: React.FC<CardProps> = ({
     );
   };
   return (
-    <Container color={color}>
-      <header></header>
-      <h3>HTML5</h3>
-      <picture>{children}</picture>
-      <div>
-        <p>
-          <Clock />
-          {duration}
-        </p>
-        {levelRendering(level)}
-      </div>
-      <button>{buttonName}</button>
-    </Container>
+    <CardComponent>
+      <Container color={color}>
+        <header></header>
+        <h3>HTML5</h3>
+        <picture>{children}</picture>
+        <div>
+          <p>
+            <Clock />
+            {duration}
+          </p>
+          {levelRendering(level)}
+        </div>
+        <button>{buttonName}</button>
+      </Container>
+    </CardComponent>
   );
 };

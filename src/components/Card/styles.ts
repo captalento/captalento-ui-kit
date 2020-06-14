@@ -11,19 +11,25 @@ interface ContainerProps {
   color: string;
 }
 
+export const CardComponent = styled.section`
+  position: relative;
+  width: 236px;
+  height: 338px;
+  z-index: 1;
+`;
+
 export const Container = styled.div<ContainerProps>`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 236px;
+  width: 100%;
   background: #2b2b2b;
   border-radius: 8px;
   color: #fff;
-  position: relative;
+  position: absolute;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
-  height: 338px;
 
   header {
     position: absolute;
