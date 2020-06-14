@@ -1,10 +1,12 @@
 {
   "name": "captalento-ui-kit",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "author": "Isaias Mendes",
   "description": "Componentes do site captalento",
   "main": "dist/index.js",
-  "keywords": ["captalento"],
+  "keywords": [
+    "captalento"
+  ],
   "license": "MIT",
   "scripts": {
     "storybook": "start-storybook -p 8080",

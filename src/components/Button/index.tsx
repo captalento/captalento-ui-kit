@@ -1,32 +1,21 @@
-import React from 'react';
+import React, { ButtonHTMLAttributes } from "react";
 
-import { Container } from './styles';
+import { Container } from "./styles";
 
-export interface Props {
-  backgroundColor?: string;
-  color?: string;
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   outlined?: boolean;
-  onClick?: () => void;
-  disabled?: boolean;
 }
 
-const ButtonWrapper: React.FC<Props> = ({
+const Button: React.FC<ButtonProps> = ({
   children,
-  backgroundColor = '#28bae7',
-  color = 'black',
-  outlined = false,
-  ...props
+  outlined = true,
+  ...rest
 }) => {
   return (
-    <Container
-      backgroundColor={backgroundColor}
-      color={color}
-      outlined={outlined}
-      {...props}
-    >
+    <Container outlined={outlined} {...rest}>
       {children}
     </Container>
   );
 };
 
-export { ButtonWrapper as Button };
+export { Button };

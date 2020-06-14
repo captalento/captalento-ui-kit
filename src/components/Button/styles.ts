@@ -1,48 +1,34 @@
-import styled from 'styled-components';
-import { lighten, darken, readableColor } from 'polished';
+import styled from "@emotion/styled";
+import { shade } from "polished";
+import { ButtonProps } from "./index";
 
-import { Props } from './index';
-
-export const Container = styled.button<Props>`
-  background-color: ${(props) =>
-    props.outlined ? 'transparent' : props.backgroundColor};
-  color: ${({ color }: Props) =>
-    readableColor(color as string, '#fff', '#19181f')};
-  color: ${(props) =>
-    props.outlined ? `${props.backgroundColor}` : 'none'};
-
-  padding: 18px 45px;
-  text-transform: uppercase;
+export const Container = styled.button<ButtonProps>`
+  width: 100%;
+  height: 3.5rem;
+  margin: 8px 0;
+  padding: 0 30px;
+  border-radius: 8px;
+  border: none;
+  background: #28bae7;
+  color: #171a1c;
+  font-family: "Open Sans", sans-serif;
   font-weight: bold;
-
-  border-radius: 4px;
-  border: ${(props) =>
-    props.outlined ? `2px solid ${props.backgroundColor}` : 'none'};
-
-  cursor: pointer;
-
-  &:disabled {
-    opacity: 0.7;
-    cursor: not-allowed;
-  }
-
-  &:hover:not(:disabled) {
-    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
-    border-color: transparent;
-    background-color: ${(props) =>
-      props.outlined
-        ? props.backgroundColor
-        : lighten(0.03, props.backgroundColor as string)};
-  }
+  font-size: 14px;
 
   &:hover {
-
-    color: 'black' !important;
+    background: ${shade(0.2, '#28bae7')};
   }
 
-  :active:not(:disabled) {
-    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
-    background-color: ${(props) =>
-      darken(0.03, props.backgroundColor as string)};
+  /* @media only screen and (max-width: 768px) {
   }
+  @media only screen and (max-width: 1024px) {
+  }
+  @media only screen and (max-width: 1200px) {
+  } */
 `;
+
+// 320px — 480px: Mobile devices
+// 481px — 768px: iPads, Tablets
+// 769px — 1024px: Small screens, laptops
+// 1025px — 1200px: Desktops, large screens
+// 1201px and more —  Extra large screens, TV
