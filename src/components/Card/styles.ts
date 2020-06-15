@@ -16,6 +16,7 @@ export const CardComponent = styled.section`
   width: 236px;
   height: 338px;
   z-index: 1;
+  margin: 6px 0 28px;
 `;
 
 export const Container = styled.div<ContainerProps>`
@@ -26,7 +27,7 @@ export const Container = styled.div<ContainerProps>`
   width: 100%;
   background: #2b2b2b;
   border-radius: 8px;
-  color: #fff;
+  color: #EEF4F5;
   position: absolute;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
