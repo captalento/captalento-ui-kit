@@ -9,6 +9,7 @@ export interface CardProps {
   level: 0 | 1 | 2;
   courseName: string;
   color: string;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 export const Card: React.FC<CardProps> = ({
@@ -18,6 +19,7 @@ export const Card: React.FC<CardProps> = ({
   duration,
   level,
   color = "#ff4747",
+  onClick,
 }) => {
   const levelRendering = (step: number) => {
     return (
@@ -42,7 +44,7 @@ export const Card: React.FC<CardProps> = ({
           </p>
           {levelRendering(level)}
         </div>
-        <button>{buttonName}</button>
+        <button onClick={onClick}>{buttonName}</button>
       </Container>
     </CardComponent>
   );
