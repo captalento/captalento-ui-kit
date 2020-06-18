@@ -25,7 +25,7 @@ export const Container = styled.div<ContainerProps>`
   justify-content: center;
   align-items: center;
   width: 100%;
-  background: #2b2b2b;
+  background: #252F32;
   border-radius: 8px;
   color: #EEF4F5;
   position: absolute;
