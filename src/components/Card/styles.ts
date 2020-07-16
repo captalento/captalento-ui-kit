@@ -47,10 +47,13 @@ export const Container = styled.div<ContainerProps>`
   }
 
   picture {
-    img {
+    & > img {
       border-radius: 50%;
       width: 120px;
       height: 120px;
+    }
+    & > svg {
+      width: 120px;
     }
   }
 
