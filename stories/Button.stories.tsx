@@ -28,25 +28,17 @@ storiesOf("Elements | Button", module)
   </div>
   ))
   .add('Disabled', () => (
-    <div style={{ width: '300px' }}>
-      <Button disabled>Disabled</Button>
-    </div>
-  ))
-  .add('Disabled transition', () => (
-    <ButtonComponent />
-  ))
-  .add('Outlined', () => (
-    <div style={{ width: '300px' }}>
-      <Button outlined>Outlined</Button>
-    </div>
-  ))
-  .add('with icon', () => (
-    <div style={{ width: '300px' }}>
-      <Button icon={RiArrowRightLine}>Logar</Button>
-    </div>
-  ))
-  .add('link', () => (
-    <div style={{ width: '300px' }}>
-      <Button outlined icon={RiArrowRightLine}>Saiba mais</Button>
-    </div>
-  ))
+  <div style={{ width: '300px' }}>
+    <Button disabled>Disabled</Button>
+  </div>
+))
+.add('Outlined', () => (
+  <div style={{ width: '300px' }}>
+    <Button outlined>Outlined</Button>
+  </div>
+))
+.add('with icon', () => (
+  <div style={{ width: '300px' }}>
+    <Button icon={null}>Logar</Button>
+  </div>
+))

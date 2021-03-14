@@ -4,7 +4,7 @@ import { Container } from "./styles";
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   outlined?: boolean;
-  icon?: React.ComponentType<IconBaseProps>;
+  icon?: React.ComponentType<IconBaseProps> | null;
 }
 
 const Button: React.FC<ButtonProps> = ({
