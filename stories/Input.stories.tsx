@@ -1,33 +1,24 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { MdSearch } from 'react-icons/md';
-
 import { Input } from '../src';
 
 storiesOf('Elements | Input', module)
   .add('Default', () => {
-    const [inputValue, setInputValue] = useState('');
-
     return (
       <Input
         name="captalento"
-        placeholder="Captalento..."
-        value={inputValue}
-        setValue={setInputValue}
+        placeholder="Digite seu e-mail"
+        type="text"
       />
     );
   })
-  .add('With Icon', () => {
-    const [inputValue, setInputValue] = useState('');
-
+  .add('focus', () => {
     return (
       <Input
         name="captalento"
-        icon={<MdSearch />}
-        placeholder="Captalento..."
-        value={inputValue}
-        setValue={setInputValue}
+        placeholder="Digite seu e-mail"
+        type="text"
       />
     );
-  });
+  })

@@ -1,45 +1,64 @@
-import styled from 'styled-components';
+import { LabelHTMLAttributes } from 'react';
+import styled from "@emotion/styled";
+import { css } from "@emotion/core";
 
-import { ILabel } from './index';
+interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement> {
+  error?: string
+}
 
-export const Label = styled.label<ILabel>`
+export const Label = styled.label<LabelProps>`
+  height:50px;
+  background-color: #0f1829;
+  border-radius: 8px;
+  margin-bottom: 15px;
+
   display: flex;
-  position: relative;
-  margin-bottom: 2rem;
+  align-items: center;
+  padding: 0 15px;
+  border: 2px solid #0f1829;
 
-  > input {
-    background-color: #19181f;
-    border: 2px solid #25242c;
-    border-radius: 4px;
+  &:focus-within {
+  border: 2px solid #64A4ED;
 
-    padding: 16px;
-    padding-left: ${(props) => (props.icon ? '40px' : '16px')};
-
-    color: #fff;
-    font-size: 16px;
-
-    transition: 180ms ease-in-out;
-
-    &::placeholder {
-      color: rgba(255, 255, 255, 0.2);
-    }
-
-    ~ svg {
-      fill: rgba(255, 255, 255, 0.2);
-      position: absolute;
-      left: 12px;
-      top: 16px;
-      width: 24px;
-      height: 24px;
-      transition: 180ms ease-in-out;
-    }
-
-    &:focus {
-      border: 2px solid ${(props) => props.color};
-
-      ~ svg {
-        fill: ${(props) => props.color};
-      }
-    }
+  svg {
+   fill: #64A4ED;
   }
+
+${(props) =>
+  props.error &&
+  css`
+  border: 2px solid #FB8686;
+
+  svg {
+    fill: #FB8686;
+  }
+`}
+}
+
+svg {
+  fill: #706F87;
+}
+
+${(props) =>
+  props.error &&
+  css`
+
+  svg {
+    fill: #FB8686;
+  }
+`}
+
+input {
+  height: 50px;
+  width: 100%;
+  margin: 0 12px;
+  font-size: 18px;
+  color: #d7dcf1;
+  border: none;
+  background: transparent;
+
+  &::placeholder {
+   color: #706F87;
+  }
+}
 `;

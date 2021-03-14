@@ -1,6 +1,6 @@
 {
   "name": "captalento-system-ui",
-  "version": "1.0.19",
+  "version": "1.0.22",
   "author": "Isaias Mendes",
   "description": "Componentes do site captalento",
   "main": "dist/index.js",
@@ -10,8 +10,7 @@
   "license": "MIT",
   "scripts": {
     "storybook": "start-storybook -p 8090",
-    "build": "tsc -p .",
-    "publish": "npm run build && npm publish"
+    "build": "tsc -p ."
   },
   "dependencies": {
     "@emotion/core": "^10.0.28",
