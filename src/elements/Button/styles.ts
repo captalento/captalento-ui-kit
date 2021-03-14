@@ -15,6 +15,7 @@ export const Container = styled.button<ButtonProps>`
   font-weight: 600;
   font-size: 18px;
   cursor: pointer;
+  transition: background .4s;
 
   &:hover {
     background: ${props => !props.disabled ? shade(0.2, '#64A4ED') : ''};
