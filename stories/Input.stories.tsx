@@ -5,7 +5,7 @@ import { MdSearch } from 'react-icons/md';
 
 import { Input } from '../src';
 
-storiesOf('Components | Input', module)
+storiesOf('Elements | Input', module)
   .add('Default', () => {
     const [inputValue, setInputValue] = useState('');
 
