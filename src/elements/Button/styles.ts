@@ -12,7 +12,7 @@ export const Container = styled.button<ButtonProps>`
   color: #243B55;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 20px;
   cursor: pointer;
   transition: background .4s;
 
