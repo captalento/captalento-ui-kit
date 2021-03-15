@@ -6,7 +6,6 @@ import { ButtonProps } from "./index";
 export const Container = styled.button<ButtonProps>`
   width: 100%;
   height: 50px;
-  margin: 8px 0;
   border-radius: 8px;
   border: none;
   background: #64A4ED;
