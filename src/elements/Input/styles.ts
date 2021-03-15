@@ -27,11 +27,16 @@ export const Label = styled.label<LabelProps>`
   transition: border .4s;
   display: flex;
   align-items: center;
+  /* position: relative; */
 
-  & + label {
-  margin-bottom: 15px;
+  /* & + label {
+    margin-top: 25.5px;
   }
 
+  & + button {
+    margin-top: 25.6px;
+  } */
+ 
   &:focus-within, &:active {
     border-color: ${props => !props.error ? '#64A4ED' : ''};
 
@@ -87,7 +92,9 @@ export const Label = styled.label<LabelProps>`
 `;
 
 export const Error = styled.p`
+  /* position: absolute; */
+  font-size: 12px;
   color: #FB8686;
-  margin-top: 7px;
+  margin: 3px 0 7px;
   animation: ${topAnimate} .4s backwards;
 `

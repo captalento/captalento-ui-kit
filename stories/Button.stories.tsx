@@ -39,6 +39,6 @@ storiesOf("Elements | Button", module)
 ))
 .add('with icon', () => (
   <div style={{ width: '300px' }}>
-    <Button icon={null}>Logar</Button>
+    <Button icon={RiArrowRightLine}>Logar</Button>
   </div>
 ))
