@@ -3,19 +3,21 @@ import { IconBaseProps } from 'react-icons';
 import { AiOutlineEyeInvisible, AiOutlineEye } from 'react-icons/ai';
 import classnames from 'classnames';
 
-import { Label } from './styles';
+import { Label, Error } from './styles';
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
   type: string;
   error?: string;
-  firtIcon?: React.ComponentType<IconBaseProps>;
+  icon?: React.ComponentType<IconBaseProps>;
   register?: (e: HTMLInputElement | null) => void;
+  ref?: React.MutableRefObject<HTMLInputElement | null>;
 }
 
-function Input({ 
+function Input({
+  ref,
   name,
-  firtIcon: FirstIcon,
+  icon: Icon,
   type,
   className,
   register,
@@ -24,11 +26,10 @@ function Input({
   const [showHide, setShowHide] = React.useState(false);
   const IconPassword = showHide ? 'text' : 'password';
   
-  const inputRef = React.useRef<HTMLInputElement | null>(null);
-
   const handleClick = React.useCallback(() => {
     setShowHide(showHide => !showHide);
   }, []);
+
   return (
     <>
       <Label
@@ -37,7 +38,7 @@ function Input({
         }
         error={error}
       >
-        {FirstIcon && <FirstIcon size={28} />}
+        {Icon && <Icon size={28} />}
         <input
           {...rest} 
           name={ name }
@@ -46,7 +47,9 @@ function Input({
             if (register) {
               register(e);
             }
-            inputRef.current = e;
+            if (ref) {
+              ref.current = e;
+            }
           }}
         />
 
@@ -59,7 +62,7 @@ function Input({
           <AiOutlineEye onClick={handleClick} size={30} />
         }
       </Label>
-      {error && <p>{error}</p>}
+      {error && <Error>{error}</Error>}
     </>
   );
 };

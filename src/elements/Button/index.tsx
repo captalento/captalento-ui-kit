@@ -5,6 +5,7 @@ import { Container } from "./styles";
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   outlined?: boolean;
   icon?: React.ComponentType<IconBaseProps> | null;
+  ref?: React.RefObject<HTMLButtonElement> | null | undefined;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -12,13 +13,16 @@ const Button: React.FC<ButtonProps> = ({
   children,
   outlined,
   disabled,
+  ref,
   ...rest
 }) => {
+
   return (
     <Container
       outlined={outlined}
       disabled={disabled}
       icon={Icon}
+      ref={ref}
       {...rest}
     >
       {children}
