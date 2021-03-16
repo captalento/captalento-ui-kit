@@ -8,7 +8,7 @@ export const Container = styled.button<ButtonProps>`
   height: 50px;
   border-radius: 8px;
   border: none;
-  background: #64A4ED;
+  background:   ;
   color: #243B55;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
