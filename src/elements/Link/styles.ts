@@ -1,22 +1,22 @@
 import styled from "@emotion/styled";
 import { shade } from "polished";
+import { LinkProps } from '@reach/router';
 
-export const ContainerLink = styled.button`
+export interface PropsLink extends LinkProps<HTMLLinkElement>{
+  to: string;
+}
+
+export const LinkStyle = styled.a<PropsLink>`
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: #EDEFF9;
+  transition: color .4s;
   padding: 2px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
   display: flex;
   align-items: center;
-
-  a {
-    font-size: 16px;
-    font-weight: 400;
-    text-decoration: none;
-    font-family: "Montserrat", sans-serif;
-    color: #EDEFF9;
-    transition: color .4s;
-  }
+  cursor: pointer;
 
   svg {
     fill: #EDEFF9;
@@ -25,9 +25,7 @@ export const ContainerLink = styled.button`
   }
 
   &:hover {
-    a {
-      color: ${shade(.2, '#EDEFF9')};
-    }
+    color: ${shade(.2, '#EDEFF9')};
 
     svg {
       fill: ${shade(0.2, '#EDEFF9')};
