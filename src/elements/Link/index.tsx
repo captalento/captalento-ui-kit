@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes, LinkHTMLAttributes } from "react";
+import React from "react";
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import { LinkProps as PropLink } from '@reach/router';
 import { LinkStyle } from './styles'
@@ -14,7 +14,7 @@ function Link({
 }: LinkProps): JSX.Element {
 
   return (
-      <LinkStyle to={to}>
+      <LinkStyle to={to} {...rest}>
         {children}
         < HiArrowNarrowRight size={20}/>
       </LinkStyle>
