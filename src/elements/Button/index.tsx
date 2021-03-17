@@ -1,6 +1,7 @@
 import React, { ButtonHTMLAttributes } from "react";
 import { IconBaseProps } from 'react-icons';
 import { Container } from "./styles";
+import '../../tailwind.css';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   outlined?: boolean;
