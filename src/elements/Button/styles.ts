@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { css } from "@emotion/core";
+import { css } from '@emotion/react';
 import { shade } from "polished";
 import { ButtonProps } from "./index";
 
@@ -8,7 +8,7 @@ export const Container = styled.button<ButtonProps>`
   height: 50px;
   border-radius: 8px;
   border: none;
-  background:   ;
+  background:   #64A4ED;
   color: #243B55;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;

@@ -1,6 +1,6 @@
 {
   "name": "captalento-system-ui",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "author": "Isaias Mendes",
   "description": "Componentes do site captalento",
   "main": "dist/index.js",
@@ -13,23 +13,36 @@
     "build": "tsc -p ."
   },
   "dependencies": {
-    "@emotion/core": "^10.0.28",
-    "@emotion/styled": "^10.0.27",
+    "loki": "0.23.0",
     "polished": "^3.5.1",
+    "react-dom": "^17.0.1",
     "styled-components": "^5.1.0"
   },
   "devDependencies": {
-    "@storybook/addon-centered": "^5.3.18",
-    "@storybook/addon-info": "^5.3.18",
-    "@storybook/react": "^5.3.18",
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-transform-react-jsx-development": "^7.12.1",
+    "@emotion/babel-plugin": "^11.0.0",
+    "@emotion/babel-preset-css-prop": "^11.0.0",
+    "@emotion/react": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
+    "@storybook/addon-a11y": "^6.1.0-rc.2",
+    "@storybook/addon-actions": "^6.1.0-rc.2",
+    "@storybook/addon-backgrounds": "^6.1.0-rc.2",
+    "@storybook/addon-essentials": "^6.1.0-rc.2",
+    "@storybook/addon-knobs": "^6.1.0-rc.2",
+    "@storybook/addon-links": "^6.1.0-rc.2",
+    "@storybook/addon-viewport": "^6.1.0-rc.2",
+    "@storybook/addons": "^6.1.0-rc.2",
+    "@storybook/react": "^6.1.0-rc.2",
+    "@storybook/theming": "^6.0.28",
     "@types/classnames": "^2.2.10",
-    "@types/react": "^16.9.34",
+    "@types/react": "^16.9.53",
     "@types/styled-components": "^5.1.0",
     "babel-loader": "^8.1.0",
-    "react": "^16.13.1",
+    "react": "^17.0.0",
     "react-docgen-typescript-loader": "^3.7.2",
     "react-icons": "^4.2.0",
     "ts-loader": "^6.2.2",
-    "typescript": "^3.8.3"
+    "typescript": "^4.0.5"
   }
 }
