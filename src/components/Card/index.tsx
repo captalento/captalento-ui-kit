@@ -25,9 +25,9 @@ export const Card: React.FC<CardProps> = ({
     return (
       <MainLevel>
         <p>nível</p>
-        {[...Array(3).keys()].map((_, i) => (
-          <Level color={color} actived={i === step} />
-        ))}
+        {/* {[...Array(3).keys()].map((_, i) => ( */}
+          <Level color={color} actived={!!step} />
+        {/* ))} */}
       </MainLevel>
     );
   };

@@ -1,6 +1,5 @@
 import { LabelHTMLAttributes } from 'react';
-import styled from "@emotion/styled";
-import { css, keyframes } from "@emotion/react";
+import styled, {css, keyframes} from "styled-components";
 
 interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement> {
   error?: string
