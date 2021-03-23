@@ -1,3 +1,5 @@
+@import './src/styles/mixins/mixins.css';
+@import './src/styles/elements/elements.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

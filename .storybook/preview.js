@@ -1,5 +1,5 @@
 import 'loki/configure-react';
-
+import '../tailwind.css'
 import './reset.css'
 
 export const parameters = {

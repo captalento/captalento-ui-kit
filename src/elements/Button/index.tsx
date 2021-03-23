@@ -19,6 +19,7 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <Container
+      className="button"
       outlined={outlined}
       disabled={disabled}
       icon={Icon}

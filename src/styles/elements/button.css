@@ -1,0 +1,7 @@
+.button {
+  @mixin button-default;
+
+  &.is-outlined {
+    @mixin button-outlined;
+  }
+}
