@@ -1,6 +1,6 @@
 {
   "name": "captalento-system-ui",
-  "version": "2.3.0",
+  "version": "2.3.2",
   "author": "Isaias Mendes",
   "description": "Componentes do site captalento",
   "main": "dist/index.js",
@@ -21,7 +21,7 @@
     "build": "tsdx build && postcss --output dist/css/system-ui.css tailwind.css",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
-    "prepare": "tsdx build",
+    "prepare": "npm run build",
     "size": "size-limit",
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
