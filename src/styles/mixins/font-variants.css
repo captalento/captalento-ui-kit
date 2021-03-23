@@ -1,0 +1,25 @@
+@define-mixin font-variants {
+  &.is-white {
+    @apply text-white;
+  }
+
+  &.is-black {
+    @apply text-black;
+  }
+
+  &.is-blue {
+    @apply text-blue;
+  }
+
+  &.is-green {
+    @apply text-green;
+  }
+
+  &.is-red {
+    @apply text-red;
+  }
+
+  /* &.is-orange {
+    @apply text-orange;
+  } */
+}

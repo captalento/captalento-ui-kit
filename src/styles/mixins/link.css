@@ -1,0 +1,30 @@
+@define-mixin link-underline $color {
+  background-image: linear-gradient(
+    theme($color) calc(100% - 1px),
+    theme($color) 1px
+  );
+}
+
+@define-mixin link-default {
+  @apply py-2 inline-block;
+  @apply cursor-pointer no-underline;
+  @apply text-black leading-none text-xs;
+  @apply bg-no-repeat bg-left-bottom;
+  background-size: 100% 1px;
+  @mixin link-underline colors.black;
+}
+
+@define-mixin link-white {
+  @apply text-white;
+  @mixin link-underline colors.white;
+}
+
+@define-mixin link-blue {
+  @apply text-blue;
+  @mixin link-underline colors.blue;
+}
+
+@define-mixin link-green {
+  @apply text-green;
+  @mixin link-underline colors.green;
+}

@@ -1,25 +1,22 @@
-import React from "react";
+import React from 'react';
 
-import { SectionStyles } from '../../src/elements/Title/styles';
-import { Title } from "../../src";
+import { Title } from '../../src';
 
-export default { title: 'Elements/Link' };
+export default { title: 'Elements/Title' };
 
 export function Default() {
   return (
     <Title>
-      Title h1
+      captalento
     </Title>
   )
 }
 
 export function DefaultH2() {
   return (
-    <SectionStyles>
-      <Title tag="h2" size="medium" variant="blue">
-        Title h2
-      </Title>
-    </SectionStyles>
+    <Title tag="h2" variant="blue">
+      captalento
+    </Title>
   )
 }
   

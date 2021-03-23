@@ -1,0 +1,51 @@
+@define-mixin text-default {
+  @apply text-xs leading-normal;
+
+  @screen sm {
+    @apply text-sm leading-snug;
+  }
+
+  @screen xl {
+    @apply text-base leading-tight;
+  }
+}
+
+@define-mixin text-small {
+  @apply text-2xs leading-tight;
+
+  @screen sm {
+    @apply text-xs leading-normal;
+  }
+
+  @screen xl {
+    @apply text-sm leading-tight;
+  }
+}
+
+@define-mixin text-large {
+  @apply text-sm leading-tight;
+
+  @screen sm {
+    @apply text-base leading-snug;
+  }
+
+  @screen xl {
+    @apply text-lg leading-snug;
+  }
+}
+
+@define-mixin responsive-text {
+  @mixin text-default;
+
+  &.is-small {
+    @mixin text-small;
+  }
+
+  &.is-medium {
+    @mixin text-default;
+  }
+
+  &.is-large {
+    @mixin text-large;
+  }
+}

@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react';
+import { HiArrowNarrowRight } from 'react-icons/hi';
 
 import { Link } from "../../src";
 
@@ -6,9 +7,6 @@ export default { title: 'Elements/Link' };
 
 export function Default() {
   return (
-    <Link to="/forgot">
-      Esqueci minha senha
-    </Link>
+    <Link href="http://app.captalento.com/">Cadastrar</Link>
   )
 }
-  

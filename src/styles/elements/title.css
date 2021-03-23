@@ -1,0 +1,4 @@
+.title {
+  @mixin font-variants;
+  @mixin responsive-title;
+}

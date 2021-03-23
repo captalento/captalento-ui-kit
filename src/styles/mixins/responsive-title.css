@@ -1,0 +1,72 @@
+@define-mixin title-shared {
+  @apply font-bold;
+  word-wrap: break-word;
+}
+
+@define-mixin title-default {
+  @mixin title-shared;
+  @apply text-2xl leading-none;
+
+  @screen sm {
+    @apply text-3xl;
+  }
+
+  @screen xl {
+    @apply text-6xl;
+  }
+}
+
+@define-mixin title-small {
+  @mixin title-shared;
+  @apply text-lg leading-none;
+
+  @screen xl {
+    @apply text-2xl;
+  }
+}
+
+@define-mixin title-large {
+  @mixin title-shared;
+  @apply text-4xl leading-none;
+
+  @screen sm {
+    @apply text-5xl leading-none;
+  }
+
+  @screen xl {
+    @apply text-7xl;
+  }
+}
+
+@define-mixin title-largest {
+  @mixin title-shared;
+  @apply text-6xl leading-none;
+
+  @screen sm {
+    @apply text-7xl leading-none;
+  }
+
+  @screen lg {
+    @apply text-8xl leading-none;
+  }
+
+  @screen xl {
+    @apply text-9xl leading-none;
+  }
+}
+
+@define-mixin responsive-title {
+  @mixin title-default;
+
+  &.is-small {
+    @mixin title-small;
+  }
+
+  &.is-large {
+    @mixin title-large;
+  }
+
+  &.is-largest {
+    @mixin title-largest;
+  }
+}
