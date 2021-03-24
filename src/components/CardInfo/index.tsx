@@ -10,7 +10,7 @@ export interface CardInfoProps {
   color?: 'blue' | 'green';
 }
 
-export function CardInfo({ icon: Icon, color ,children }: CardInfoProps): JSX.Element {
+export function CardInfo({ icon: Icon, color, children }: CardInfoProps): JSX.Element {
   return (
     <Contant>
       {color ? <Effect color={color} /> : null}
