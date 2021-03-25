@@ -1,6 +1,6 @@
-import styled, {css} from "styled-components";
-import { shade } from "polished";
-import { ButtonProps } from "./index";
+import styled, { css } from 'styled-components';
+import { shade } from 'polished';
+import { ButtonProps } from './index';
 
 export const Container = styled.button<ButtonProps>`
   width: 100%;
@@ -16,12 +16,12 @@ export const Container = styled.button<ButtonProps>`
   transition: background .4s;
 
   &:hover {
-    background: ${props => !props.disabled ? shade(0.2, '#64A4ED') : ''};
-    background: ${props => props.outlined ? '#64A4ED' : ''};
-    color: ${props => props.outlined ? '#243B55' : ''};
+    background: ${props => (!props.disabled ? shade(0.2, '#64A4ED') : '')};
+    background: ${props => (props.outlined ? '#64A4ED' : '')};
+    color: ${props => (props.outlined ? '#243B55' : '')};
   }
 
-  ${(props) =>
+  ${props =>
     props.icon &&
     css`
       display: flex;
@@ -31,18 +31,18 @@ export const Container = styled.button<ButtonProps>`
     `}
 
   
-  ${(props) =>
+  ${props =>
     props.disabled &&
     css`
-      background: #ADCCF0;
-      cursor: not-allowed
+      background: #adccf0;
+      cursor: not-allowed;
     `}
 
-  ${(props) =>
+  ${props =>
     props.outlined &&
     css`
-      border: 2px solid #64A4ED;
+      border: 2px solid #64a4ed;
       background: transparent;
-      color: #64A4ED;
+      color: #64a4ed;
     `}
 `;

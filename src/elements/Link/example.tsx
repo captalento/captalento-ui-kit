@@ -5,7 +5,8 @@ import { Variant, Size } from '../../common';
 
 interface LinkBaseProps<T> extends React.AnchorHTMLAttributes<T> {}
 
-export interface LinkProps extends Exclude<LinkBaseProps<HTMLAnchorElement>, 'size' | 'disabled'> {
+export interface LinkProps
+  extends Exclude<LinkBaseProps<HTMLAnchorElement>, 'size' | 'disabled'> {
   icon?: string;
   outlined?: boolean;
   size?: Exclude<Size, 'largest'>;
@@ -38,7 +39,9 @@ export const Link: React.FC<LinkProps> = ({
     [`icon-${icon}`]: true,
     'is-blue': variant === 'blue' && outlined,
     'is-black': outlined ? variant === 'black' : variant === 'white',
-    'is-white': outlined ? variant === 'white' : ['black', 'blue'].includes(variant as string),
+    'is-white': outlined
+      ? variant === 'white'
+      : ['black', 'blue'].includes(variant as string),
   });
 
   return (

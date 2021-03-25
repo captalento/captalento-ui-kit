@@ -1,8 +1,8 @@
 import { LabelHTMLAttributes } from 'react';
-import styled, {css, keyframes} from "styled-components";
+import styled, { css, keyframes } from 'styled-components';
 
 interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement> {
-  error?: string
+  error?: string;
 }
 
 const topAnimate = keyframes`
@@ -18,12 +18,12 @@ const topAnimate = keyframes`
 `;
 
 export const Label = styled.label<LabelProps>`
-  height:50px;
+  height: 50px;
   padding: 0 15px;
   border-radius: 8px;
   border: 2px solid #0f1829;
   background-color: #0f1829;
-  transition: border .4s;
+  transition: border 0.4s;
   display: flex;
   align-items: center;
   /* position: relative; */
@@ -35,45 +35,46 @@ export const Label = styled.label<LabelProps>`
   & + button {
     margin-top: 25.6px;
   } */
- 
-  &:focus-within, &:active {
-    border-color: ${props => !props.error ? '#64A4ED' : ''};
+
+  &:focus-within,
+  &:active {
+    border-color: ${props => (!props.error ? '#64A4ED' : '')};
 
     svg {
-      fill: #64A4ED;
-      transition: fill .4s;
+      fill: #64a4ed;
+      transition: fill 0.4s;
     }
 
-    ${(props) =>
-    props.error &&
-    css`
-    svg {
-      fill: #FB8686;
-    }
-  `}
+    ${props =>
+      props.error &&
+      css`
+        svg {
+          fill: #fb8686;
+        }
+      `}
   }
 
-  ${(props) =>
+  ${props =>
     props.error &&
     css`
-    border-color: #FB8686;
+      border-color: #fb8686;
 
-    svg {
-      fill: #FB8686;
-    }
-  `}
+      svg {
+        fill: #fb8686;
+      }
+    `}
 
   svg {
-    fill: #A0A2A4;
+    fill: #a0a2a4;
   }
 
-  ${(props) =>
+  ${props =>
     props.error &&
     css`
-    svg {
-      fill: #FB8686;
-    }
-  `}
+      svg {
+        fill: #fb8686;
+      }
+    `}
 
   input {
     height: 50px;
@@ -85,7 +86,7 @@ export const Label = styled.label<LabelProps>`
     background: transparent;
 
     &::placeholder {
-      color: #A0A2A4;
+      color: #a0a2a4;
     }
   }
 `;
@@ -93,7 +94,7 @@ export const Label = styled.label<LabelProps>`
 export const Error = styled.p`
   /* position: absolute; */
   font-size: 12px;
-  color: #FB8686;
+  color: #fb8686;
   margin: 3px 0 7px;
-  animation: ${topAnimate} .4s backwards;
-`
+  animation: ${topAnimate} 0.4s backwards;
+`;

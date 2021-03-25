@@ -22,10 +22,11 @@ function Input({
   className,
   register,
   error,
-  ...rest }: InputProps): JSX.Element {
+  ...rest
+}: InputProps): JSX.Element {
   const [showHide, setShowHide] = React.useState(false);
   const IconPassword = showHide ? 'text' : 'password';
-  
+
   const handleClick = React.useCallback(() => {
     setShowHide(showHide => !showHide);
   }, []);
@@ -33,17 +34,15 @@ function Input({
   return (
     <>
       <Label
-        className={
-          classnames(className, error ? 'borderError' : '')
-        }
+        className={classnames(className, error ? 'borderError' : '')}
         error={error}
       >
         {Icon && <Icon size={28} />}
         <input
-          {...rest} 
-          name={ name }
+          {...rest}
+          name={name}
           type={type === 'password' ? IconPassword : type}
-          ref={(e) => {
+          ref={e => {
             if (register) {
               register(e);
             }
@@ -53,18 +52,16 @@ function Input({
           }}
         />
 
-        {
-          type === 'password' && !showHide &&
+        {type === 'password' && !showHide && (
           <AiOutlineEyeInvisible onClick={handleClick} size={30} />
-        }
-        {
-          type === 'password' && showHide &&
+        )}
+        {type === 'password' && showHide && (
           <AiOutlineEye onClick={handleClick} size={30} />
-        }
+        )}
       </Label>
       {error && <Error>{error}</Error>}
     </>
   );
-};
+}
 
 export { Input };

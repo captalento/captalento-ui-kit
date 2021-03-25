@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import { CardComponent, Container, Level, MainLevel } from "./styles";
-import Clock from "./clock";
+import { CardComponent, Container, Level, MainLevel } from './styles';
+import Clock from './clock';
 
 export interface CardProps {
   buttonName: string;
@@ -18,7 +18,7 @@ export const Card: React.FC<CardProps> = ({
   buttonName,
   duration,
   level,
-  color = "#ff4747",
+  color = '#ff4747',
   onClick,
 }) => {
   const levelRendering = (step: number) => {
@@ -26,7 +26,7 @@ export const Card: React.FC<CardProps> = ({
       <MainLevel>
         <p>nível</p>
         {/* {[...Array(3).keys()].map((_, i) => ( */}
-          <Level color={color} actived={!!step} />
+        <Level color={color} actived={!!step} />
         {/* ))} */}
       </MainLevel>
     );

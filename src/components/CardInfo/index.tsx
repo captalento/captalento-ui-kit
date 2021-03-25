@@ -4,13 +4,17 @@ import { IconBaseProps } from 'react-icons';
 import { Contant, Card, Effect } from './styles';
 
 export interface CardInfoProps {
-  icon?:  React.ComponentType<IconBaseProps> | null;
+  icon?: React.ComponentType<IconBaseProps> | null;
   colorEffect?: boolean;
   children: any;
   color?: 'blue' | 'green';
 }
 
-export function CardInfo({ icon: Icon, color, children }: CardInfoProps): JSX.Element {
+export function CardInfo({
+  icon: Icon,
+  color,
+  children,
+}: CardInfoProps): JSX.Element {
   return (
     <Contant>
       {color ? <Effect color={color} /> : null}
@@ -19,5 +23,5 @@ export function CardInfo({ icon: Icon, color, children }: CardInfoProps): JSX.El
         {children}
       </Card>
     </Contant>
-  )
+  );
 }

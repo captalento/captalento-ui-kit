@@ -9,9 +9,9 @@ export const Contant = styled.div`
 export const Card = styled.div`
   width: 100%;
   border-radius: 1rem;
-  background-color: #405B79;
+  background-color: #405b79;
   padding: 2rem 1.25rem;
-  color: #EDEFF9;
+  color: #edeff9;
 
   display: flex;
   flex-direction: column;
@@ -42,6 +42,6 @@ export const Effect = styled.div`
   position: relative;
   top: 1.375rem;
   z-index: -1;
-  background-color: ${props => props.color === 'blue' ? '#98D0F0' : 'null'} ;
-  background-color: ${props => props.color === 'green' ? '#ADFF9F' : 'null'} ;
+  background-color: ${props => (props.color === 'blue' ? '#98D0F0' : 'null')};
+  background-color: ${props => (props.color === 'green' ? '#ADFF9F' : 'null')};
 `;

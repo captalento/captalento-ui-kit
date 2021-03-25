@@ -1,6 +1,6 @@
-import styled, {css} from "styled-components";
+import styled, { css } from 'styled-components';
 // import { css } from '@emotion/react';
-import { shade } from "polished";
+import { shade } from 'polished';
 
 interface LevelProps {
   actived: boolean;
@@ -25,17 +25,17 @@ export const Container = styled.div<ContainerProps>`
   justify-content: center;
   align-items: center;
   width: 100%;
-  background: #252F32;
+  background: #252f32;
   border-radius: 8px;
-  color: #EEF4F5;
+  color: #eef4f5;
   position: absolute;
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 
   header {
     position: absolute;
     top: -5px;
-    background: ${(props) => props.color};
+    background: ${props => props.color};
     width: calc(100% - 6px);
     height: 20px;
     border-radius: 8px 8px 0 0;
@@ -76,7 +76,7 @@ export const Container = styled.div<ContainerProps>`
   button {
     width: calc(100% - 40px);
     height: 48px;
-    background: ${(props) => props.color};
+    background: ${props => props.color};
     position: absolute;
     border-radius: 8px;
     bottom: -24px;
@@ -88,7 +88,7 @@ export const Container = styled.div<ContainerProps>`
     color: #2b2b2b;
 
     &:hover {
-      background: ${(props) => shade(0.2, props.color)};
+      background: ${props => shade(0.2, props.color)};
     }
   }
 `;
@@ -101,7 +101,7 @@ export const Level = styled.section<LevelProps>`
   border: 1px solid #c0c0c8;
   margin: 0 5px 0 0;
 
-  ${(props) =>
+  ${props =>
     props.actived &&
     css`
       border-color: ${props.color};

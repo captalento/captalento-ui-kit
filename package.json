@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "tsdx watch",
-    "build": "tsdx build && postcss --output dist/css/system-ui.css tailwind.css",
+    "build": "NODE_ENV=production tsdx build && postcss --output dist/css/system-ui.css tailwind.css",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
     "prepare": "npm run build",

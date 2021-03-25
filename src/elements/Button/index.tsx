@@ -1,6 +1,6 @@
-import React, { ButtonHTMLAttributes } from "react";
+import React, { ButtonHTMLAttributes } from 'react';
 import { IconBaseProps } from 'react-icons';
-import { Container } from "./styles";
+import { Container } from './styles';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   outlined?: boolean;
@@ -16,7 +16,6 @@ const Button: React.FC<ButtonProps> = ({
   ref,
   ...rest
 }) => {
-
   return (
     <Container
       className="button"
