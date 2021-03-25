@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import React, { ButtonHTMLAttributes } from 'react';
 import { IconBaseProps } from 'react-icons';
 import { Container } from './styles';
@@ -14,11 +15,12 @@ const Button: React.FC<ButtonProps> = ({
   outlined,
   disabled,
   ref,
+  className,
   ...rest
 }) => {
   return (
     <Container
-      className="button"
+      className={classnames("button", className)}
       outlined={outlined}
       disabled={disabled}
       icon={Icon}
