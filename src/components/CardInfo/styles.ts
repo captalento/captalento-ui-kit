@@ -16,23 +16,6 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  svg {
-    margin-bottom: 1rem;
-  }
-
-  h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-
-  p {
-    max-width: 195px;
-    text-align: center;
-    font-weight: 400;
-    font-size: 1.125rem;
-  }
 `;
 
 export const Effect = styled.div`
