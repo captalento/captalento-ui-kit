@@ -18,8 +18,4 @@
   &.is-red {
     @apply text-red;
   }
-
-  /* &.is-orange {
-    @apply text-orange;
-  } */
 }

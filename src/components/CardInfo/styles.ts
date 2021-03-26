@@ -11,11 +11,6 @@ export const Card = styled.div`
   border-radius: 1rem;
   background-color: #405b79;
   padding: 2rem 1.25rem;
-  color: #edeff9;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 `;
 
 export const Effect = styled.div`
