@@ -21,6 +21,12 @@ module.exports = {
       '9xl': '6rem', // 96px
       '10xl': '14.375rem', // 230px
     },
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1440px',
+    },
     colors: {
       transparent: 'transparent',
       black: '#000',
@@ -29,6 +35,7 @@ module.exports = {
       red: '#FB8686',
       green: '#ADFF9F',
       blue: '#64A4ED',
+      bg: '#243B55',
     },
     boxShadow: {
       sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
