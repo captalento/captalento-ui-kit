@@ -1,10 +1,13 @@
-import classnames from 'classnames';
+import classNames from 'classnames';
 import React, { ButtonHTMLAttributes } from 'react';
 import { IconBaseProps } from 'react-icons';
-import { Container } from './styles';
+import { Size, Variant } from '../../common';
+// import { Container } from './styles';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   outlined?: boolean;
+  size?: Size;
+  variant?: Variant;
   icon?: React.ComponentType<IconBaseProps> | null;
   ref?: React.RefObject<HTMLButtonElement> | null | undefined;
 }
@@ -13,23 +16,33 @@ const Button: React.FC<ButtonProps> = ({
   icon: Icon,
   children,
   outlined,
-  disabled,
   ref,
+  size = 'medium',
+  variant = 'blue',
   className,
-  ...rest
+  ...props
 }) => {
+  const classes = classNames(
+    'button',
+    {
+      [`is-${size}`]: true,
+      [`is-${variant}`]: true,
+      'is-outlined': outlined,
+      'is-icon': Icon,
+    },
+    className
+  );
+
   return (
-    <Container
-      className={classnames("button", className)}
-      outlined={outlined}
-      disabled={disabled}
-      icon={Icon}
+    <button
+      className={classes}
+      // icon={Icon}
       ref={ref}
-      {...rest}
+      {...props}
     >
       {children}
-      {Icon ? <Icon size={20} /> : null}
-    </Container>
+      {Icon ? <Icon size={20} className="max-w-max" /> : null}
+    </button>
   );
 };
 

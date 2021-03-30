@@ -35,7 +35,8 @@ module.exports = {
       red: '#FB8686',
       green: '#ADFF9F',
       blue: '#64A4ED',
-      bg: '#243B55',
+      'blue-dark': '#243B55',
+      disabled: '#ADCCF0',
     },
     boxShadow: {
       sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',

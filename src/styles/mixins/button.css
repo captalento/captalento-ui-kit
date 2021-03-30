@@ -1,8 +1,6 @@
 @define-mixin button-default {
-  /* default mobile styles */
-  @apply min-w-full h-14 px-8 rounded-full inline-flex items-center justify-between;
-  @apply bg-blue text-white font-medium;
-  @apply border-2 border-blue;
+  @apply min-w-full h-12 px-5 rounded-lg flex flex-row items-center	justify-center;
+  @apply bg-blue text-white text-sm text-blue-dark font-semibold;
   @apply transition duration-200 ease-in;
   > :first-of-type {
     flex: 1;
@@ -13,18 +11,12 @@
   }
 
   &:disabled {
-    @apply bg-gray border-gray pointer-events-none;
+    @apply bg-disabled cursor-not-allowed;
   }
-
-  /* &:focus {
-    @apply outline-none shadow-outline;
-  } */
 
   &:hover {
-    @apply bg-blue;
   }
 
-  /* size variants */
   &.is-small {
     @apply h-10 px-6;
   }
@@ -35,7 +27,7 @@
 }
 
 @define-mixin button-outlined {
-  @apply text-blue bg-transparent border-blue;
+  @apply text-blue bg-transparent border-blue border-2;
 
   &:hover {
     @apply text-blue border-blue;
@@ -44,4 +36,8 @@
   &:disabled {
     @apply text-gray border-gray pointer-events-none;
   }
+}
+
+@define-mixin button-icon {
+  @apply justify-between;
 }

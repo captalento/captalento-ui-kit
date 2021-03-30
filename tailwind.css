@@ -1,7 +1,8 @@
-@import './src/styles/mixins/button.css';
 @import './src/styles/mixins/font-variants.css';
 @import './src/styles/mixins/responsive-title.css';
 @import './src/styles/mixins/responsive-text.css';
+@import './src/styles/mixins/button.css';
+@import './src/styles/mixins/link.css';
 
 @import './src/styles/elements/elements.css';
 @tailwind base;

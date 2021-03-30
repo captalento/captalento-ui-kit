@@ -4,4 +4,8 @@
   &.is-outlined {
     @mixin button-outlined;
   }
+
+  &.is-icon {
+    @mixin button-icon;
+  }
 }
