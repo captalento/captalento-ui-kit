@@ -5,13 +5,37 @@
   );
 }
 
+@define-mixin default-link-button {
+  @apply min-w-full h-12 px-5 rounded-lg flex flex-row items-center	justify-center;
+  @apply bg-blue text-sm text-blue-dark font-semibold;
+  @apply transition duration-200 ease-in;
+}
+
 @define-mixin link-default {
-  @apply py-2 inline-block;
-  @apply cursor-pointer no-underline;
-  @apply text-black leading-none text-xs;
-  @apply bg-no-repeat bg-left-bottom;
-  background-size: 100% 1px;
-  @mixin link-underline colors.black;
+  @apply text-xs	text-white;
+}
+
+@define-mixin is-icon {
+  @apply flex flex-row items-center;
+}
+
+@define-mixin is-button {
+  @mixin default-link-button;
+}
+
+@define-mixin is-outline {
+  @mixin default-link-button;
+  @apply text-blue bg-transparent border-blue border-2;
+}
+
+@define-mixin is-icon-button {
+  @mixin default-link-button;
+  @apply justify-between;
+}
+
+@define-mixin is-icon-outline {
+  @mixin default-link-button;
+  @apply text-blue bg-transparent border-blue border-2 justify-between;
 }
 
 @define-mixin link-white {

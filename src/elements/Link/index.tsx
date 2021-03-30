@@ -27,8 +27,11 @@ function Link({
     {
       [`is-${size}`]: true,
       [`is-${variant}`]: true,
-      'is-outlined': isButton && isOutline,
+      'is-outline': isButton && isOutline,
       'is-button': isButton,
+      'is-icon': Icon,
+      'is-icon-button': isButton && Icon,
+      'is-icon-outline': isButton && Icon && isOutline,
     },
     className
   );
@@ -36,7 +39,7 @@ function Link({
   return (
     <a href={href} className={linkClasses}>
       {children}
-      {Icon ? <Icon size={20} /> : null}
+      {Icon ? <Icon size={20} className="ml-2" /> : null}
     </a>
   );
 }

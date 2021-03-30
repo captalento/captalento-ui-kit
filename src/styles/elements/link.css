@@ -1,4 +1,24 @@
 .link {
   @mixin font-variants;
   @mixin responsive-text;
+
+  &.is-icon {
+    @mixin is-icon;
+  }
+
+  &.is-button {
+    @mixin is-button;
+  }
+
+  &.is-outline {
+    @mixin is-outline;
+  }
+
+  &.is-icon-button {
+    @mixin is-icon-button;
+  }
+
+  &.is-icon-outline {
+    @mixin is-icon-outline;
+  }
 }

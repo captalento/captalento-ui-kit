@@ -4,14 +4,14 @@ import { Size, Variant } from '../../common';
 
 export interface TitleProps
   extends React.HtmlHTMLAttributes<HTMLHeadingElement> {
-  tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  tag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   icon?: string;
   size?: Size;
   variant?: Variant;
 }
 
 function Title({
-  tag = 'h1',
+  tag,
   icon,
   size,
   className,
