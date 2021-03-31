@@ -40,8 +40,8 @@ const Button: React.FC<ButtonProps> = ({
       ref={ref}
       {...props}
     >
-      {children}
-      {Icon ? <Icon size={20} className="max-w-max" /> : null}
+      {children ? <span>{children}</span> : null}
+      {Icon ? <Icon size={20} className="max-w-max ml-5" /> : null}
     </button>
   );
 };

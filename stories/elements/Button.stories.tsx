@@ -6,31 +6,20 @@ import { Button } from '../../src';
 export default { title: 'Elements/Button' };
 
 export function Default() {
-  return (
-    <div style={{ width: '300px' }}>
-      <Button>Entrar</Button>
-    </div>
-  );
+  return <Button>Entrar</Button>;
 }
 
 export function Disabled() {
-  return (
-    <div style={{ width: '300px' }}>
-      <Button disabled={true}>Disabled</Button>
-    </div>
-  );
+  return <Button disabled={true}>Disabled</Button>;
 }
 
 export function Outlined() {
-  return (
-    <div style={{ width: '300px' }}>
-      <Button outlined>Outlined</Button>
-    </div>
-  );
+  return <Button outlined>Outlined</Button>;
 }
+
 export function WithIcon() {
   return (
-    <Button className="w-72" icon={RiArrowRightLine}>
+    <Button className="" icon={RiArrowRightLine}>
       Logar
     </Button>
   );
@@ -44,11 +33,7 @@ export const EffectDisabled = () => {
     setActived(!actived);
   }, 2000);
 
-  return (
-    <div style={{ width: '300px' }}>
-      <Button disabled={actived}>{!actived ? 'logar' : 'Disabled'}</Button>
-    </div>
-  );
+  return <Button disabled={actived}>{!actived ? 'logar' : 'Disabled'}</Button>;
 };
 
 EffectDisabled.storyName = 'Effect disabled';
