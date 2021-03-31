@@ -30,9 +30,9 @@ export function Outlined() {
 }
 export function WithIcon() {
   return (
-    <div style={{ width: '300px' }}>
-      <Button icon={RiArrowRightLine}>Logar</Button>
-    </div>
+    <Button className="w-72" icon={RiArrowRightLine}>
+      Logar
+    </Button>
   );
 }
 

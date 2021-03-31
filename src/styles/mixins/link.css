@@ -5,14 +5,14 @@
   );
 }
 
-@define-mixin default-link-button {
-  @apply min-w-full h-12 px-5 rounded-lg flex flex-row items-center	justify-center;
-  @apply bg-blue text-sm text-blue-dark font-semibold;
-  @apply transition duration-200 ease-in;
-}
-
 @define-mixin link-default {
   @apply text-xs	text-white;
+}
+
+@define-mixin default-link-button {
+  @apply h-12 px-5 rounded-lg flex flex-row items-center justify-center;
+  @apply bg-blue text-sm text-blue-dark font-semibold;
+  @apply transition duration-200 ease-in;
 }
 
 @define-mixin is-icon {

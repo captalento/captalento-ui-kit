@@ -19,7 +19,7 @@ export function WithIcon() {
 
 export function Button() {
   return (
-    <div style={{ width: '300px' }}>
+    <div className="w-72">
       <Link href="http://app.captalento.com/" isButton>
         Cadastrar
       </Link>
@@ -28,7 +28,7 @@ export function Button() {
 }
 export function Outline() {
   return (
-    <div style={{ width: '300px' }}>
+    <div className="w-72">
       <Link href="http://app.captalento.com/" isButton isOutline>
         Cadastrar
       </Link>
@@ -38,7 +38,7 @@ export function Outline() {
 
 export function ButtonWithIcon() {
   return (
-    <div style={{ width: '300px' }}>
+    <div className="w-72">
       <Link
         href="http://app.captalento.com/"
         icon={HiArrowNarrowRight}
@@ -52,7 +52,7 @@ export function ButtonWithIcon() {
 
 export function OultlineWithIcon() {
   return (
-    <div style={{ width: '300px' }}>
+    <div className="w-72">
       <Link
         href="http://app.captalento.com/"
         icon={HiArrowNarrowRight}
