@@ -1,6 +1,6 @@
 @define-mixin font-variants {
   &.is-white {
-    @apply text-white;
+    @apply text-white-100;
   }
 
   &.is-black {
@@ -8,11 +8,11 @@
   }
 
   &.is-blue {
-    @apply text-blue;
+    @apply text-blue-100;
   }
 
   &.is-green {
-    @apply text-green;
+    @apply text-green-100;
   }
 
   &.is-red {

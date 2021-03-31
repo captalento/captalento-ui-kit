@@ -1,0 +1,11 @@
+.card {
+  @mixin card-default;
+
+  &.is-blue {
+    @mixin effect-blue;
+  }
+
+  &.is-green {
+    @mixin effect-green;
+  }
+}

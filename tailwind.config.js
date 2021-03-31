@@ -30,16 +30,19 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       black: '#000',
-      white: '#EDEFF9',
+      white: { 100: '#EDEFF9', 200: '#8E92A3' },
       gray: '#A0A2A4',
       red: '#FB8686',
-      green: '#ADFF9F',
-      blue: '#64A4ED',
+      green: { 100: '#ADFF9F', 200: '#88DD7A' },
+      blue: { 100: '#64A4ED', 200: '#4887CE' },
       'blue-dark': '#243B55',
+      'blue-card': '#405B79',
       disabled: '#ADCCF0',
     },
     boxShadow: {
       sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+      blue: '0px -14px 0px -4px #64A4ED',
+      green: '0px -14px 0px -4px #ADFF9F',
       DEFAULT: '0px 4px 6px #141E30, 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
       md:
         '0 4px 6px -1px  0px 4px 16px #141E30, 0 2px 4px -1px rgba(0, 0, 0, 0.06)',

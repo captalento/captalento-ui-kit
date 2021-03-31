@@ -6,12 +6,16 @@
 }
 
 @define-mixin link-default {
-  @apply text-xs	text-white;
+  @apply text-xs text-white-100;
+
+  &:hover {
+    @apply text-white-200;
+  }
 }
 
 @define-mixin default-link-button {
   @apply h-12 px-5 rounded-lg flex flex-row items-center justify-center;
-  @apply bg-blue text-sm text-blue-dark font-semibold;
+  @apply bg-blue-100 text-sm text-blue-dark font-semibold;
   @apply transition duration-200 ease-in;
 }
 
@@ -25,7 +29,7 @@
 
 @define-mixin is-outline {
   @mixin default-link-button;
-  @apply text-blue bg-transparent border-blue border-2;
+  @apply text-blue-100 bg-transparent border-blue-100 border-2;
 }
 
 @define-mixin is-icon-button {
@@ -35,20 +39,20 @@
 
 @define-mixin is-icon-outline {
   @mixin default-link-button;
-  @apply text-blue bg-transparent border-blue border-2 justify-between;
+  @apply text-blue-100 bg-transparent border-blue-100 border-2 justify-between;
 }
 
 @define-mixin link-white {
-  @apply text-white;
+  @apply text-white-100;
   @mixin link-underline colors.white;
 }
 
 @define-mixin link-blue {
-  @apply text-blue;
+  @apply text-blue-100;
   @mixin link-underline colors.blue;
 }
 
 @define-mixin link-green {
-  @apply text-green;
+  @apply text-green-100;
   @mixin link-underline colors.green;
 }

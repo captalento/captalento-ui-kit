@@ -39,7 +39,12 @@ function Link({
   return (
     <a href={href} className={linkClasses}>
       {children}
-      {Icon ? <Icon size={20} className="ml-2" /> : null}
+      {Icon ? (
+        <Icon
+          size={20}
+          className={`${isButton || isOutline ? 'ml-5' : 'ml-2'}`}
+        />
+      ) : null}
     </a>
   );
 }
