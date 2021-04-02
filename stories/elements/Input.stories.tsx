@@ -9,36 +9,30 @@ export default { title: 'Elements/Input' };
 
 export function Default() {
   return (
-    <div style={{ width: '300px' }}>
-      <Input
-        name="captalento"
-        placeholder="Digite seu e-mail"
-        type="text"
-      />
+    <div style={{ width: '360px' }}>
+      <Input name="captalento" placeholder="Email" type="text" />
     </div>
   );
 }
-  
+
 export function Focus() {
   return (
-    <div style={{ width: '300px' }}>
-      <Input
-        autoFocus
-        name="captalento"
-        placeholder="Digite seu e-mail"
-        type="text"
-      />
+    <div style={{ width: '360px' }}>
+      <Input autoFocus name="captalento" placeholder="Email" type="text" />
     </div>
   );
 }
 
 export function Error() {
+  const [value, setValue] = React.useState('');
   return (
-    <div style={{ width: '300px' }}>
+    <div style={{ width: '360px' }}>
       <Input
         name="captalento"
-        placeholder="Digite seu e-mail"
+        placeholder="Email"
         type="text"
+        value={value}
+        onChange={({ target }) => setValue(target.value)}
         error={'Message error descripition'}
       />
     </div>
@@ -47,7 +41,7 @@ export function Error() {
 
 export function Icon() {
   return (
-    <div style={{ width: '300px' }}>
+    <div style={{ width: '360px' }}>
       <Input
         name="captalento"
         placeholder="Digite seu primeiro nome"
@@ -58,9 +52,9 @@ export function Icon() {
   );
 }
 
-export function IconFocus(){
+export function IconFocus() {
   return (
-    <div style={{ width: '300px' }}>
+    <div style={{ width: '360px' }}>
       <Input
         autoFocus
         name="captalento"
@@ -72,10 +66,9 @@ export function IconFocus(){
   );
 }
 
-
-export function IconError () {
+export function IconError() {
   return (
-    <div style={{ width: '300px' }}>
+    <div style={{ width: '360px' }}>
       <Input
         name="captalento"
         placeholder="Digite seu primeiro nome"
@@ -84,26 +77,22 @@ export function IconError () {
         error={'Message error descripition'}
       />
     </div>
-  )
+  );
 }
 // IconError.storyName= 'Icon error';
 export function TypePassword() {
   return (
-    <div style={{ width: '300px' }}>
-      <Input
-        name="captalento"
-        placeholder="Digite sua senha"
-        type="password"
-      />
+    <div style={{ width: '360px' }}>
+      <Input name="captalento" placeholder="Digite sua senha" type="password" />
     </div>
-  )
+  );
 }
-    
+
 TypePassword.storyName = 'Type password';
 
 export function TypePasswordWithIcon() {
   return (
-    <div style={{ width: '300px' }}>
+    <div style={{ width: '360px' }}>
       <Input
         name="captalento"
         placeholder="Digite sua senha"
@@ -111,7 +100,7 @@ export function TypePasswordWithIcon() {
         icon={BiLockAlt}
       />
     </div>
-  )
+  );
 }
 
 TypePasswordWithIcon.storyName = 'Type password with icon';
@@ -119,18 +108,18 @@ TypePasswordWithIcon.storyName = 'Type password with icon';
 export function InputComponent() {
   const [actived, setActived] = React.useState<boolean>(true);
   setTimeout(() => {
-    setActived(!actived)
-  }, 3000)
-  
-  
+    setActived(!actived);
+  }, 3000);
+
   return (
-    <div style={{ width: '300px' }}>
+    <div style={{ width: '360px' }}>
       <Input
         name="captalento"
         placeholder="Digite sua senha"
         type="password"
         icon={BiLockAlt}
         error={actived ? 'Error message' : ''}
+        className="mb-4"
       />
 
       <Input
@@ -139,11 +128,14 @@ export function InputComponent() {
         type="password"
         icon={BiLockAlt}
         error={actived ? 'Error message' : ''}
+        className="mb-4"
       />
 
-      <Button icon={RiArrowRightLine}>Logar</Button>
+      <Button icon={RiArrowRightLine} className="w-full">
+        Logar
+      </Button>
     </div>
   );
 }
-  
+
 InputComponent.storyName = 'Two inputs errors';

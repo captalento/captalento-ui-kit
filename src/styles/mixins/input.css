@@ -1,0 +1,72 @@
+@define-mixin placeholder-default {
+  @apply absolute ml-5 text-gray text-xs;
+}
+
+@define-mixin input-default {
+  @apply h-13 flex items-center bg-blue-input rounded-lg;
+  @apply transition duration-500 border-2 border-blue-input relative;
+
+  p {
+    @mixin placeholder-default;
+
+    &.contains-text {
+      @apply top-0.5 text-4xs;
+    }
+  }
+
+  &.is-icon {
+    p {
+      @apply ml-14;
+    }
+  }
+
+  &:focus-within,
+  &:active {
+    @apply border-blue-100;
+
+    svg {
+      @apply fill-current text-blue-100;
+    }
+
+    div[atr*='test'] {
+      background: #ffff00;
+    }
+
+    p:not([class*='contains-text']) {
+      @mixin placeholder-default;
+      @apply top-0.5 text-4xs;
+      @apply animate-animaplaceholder;
+    }
+
+    input {
+      @apply mt-3;
+    }
+
+    &.is-icon {
+      p {
+        @apply ml-14;
+      }
+    }
+  }
+
+  input {
+    @apply h-13 w-full mx-5 text-xs text-white-100 border-0 bg-transparent;
+
+    &::placeholder {
+      @apply text-gray;
+    }
+  }
+
+  svg {
+    @apply transition duration-500;
+    fill: #a0a2a4;
+  }
+}
+
+@define-mixin input-error {
+  @apply border-red;
+
+  svg {
+    @apply fill-current text-red;
+  }
+}

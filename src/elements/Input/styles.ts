@@ -5,7 +5,7 @@ interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement> {
   error?: string;
 }
 
-const topAnimate = keyframes`
+export const topAnimate = keyframes`
   from {
     opacity: 0;
     transform: translateY(-20px);
@@ -38,14 +38,14 @@ export const Label = styled.label<LabelProps>`
 
   &:focus-within,
   &:active {
-    border-color: ${props => (!props.error ? '#64A4ED' : '')};
+    border-color: ${(props) => (!props.error ? '#64A4ED' : '')};
 
     svg {
       fill: #64a4ed;
       transition: fill 0.4s;
     }
 
-    ${props =>
+    ${(props) =>
       props.error &&
       css`
         svg {
@@ -54,7 +54,7 @@ export const Label = styled.label<LabelProps>`
       `}
   }
 
-  ${props =>
+  ${(props) =>
     props.error &&
     css`
       border-color: #fb8686;
@@ -68,7 +68,7 @@ export const Label = styled.label<LabelProps>`
     fill: #a0a2a4;
   }
 
-  ${props =>
+  ${(props) =>
     props.error &&
     css`
       svg {

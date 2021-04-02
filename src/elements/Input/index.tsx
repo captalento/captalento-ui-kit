@@ -1,9 +1,7 @@
 import React, { InputHTMLAttributes } from 'react';
 import { IconBaseProps } from 'react-icons';
 import { AiOutlineEyeInvisible, AiOutlineEye } from 'react-icons/ai';
-import classnames from 'classnames';
-
-import { Label, Error } from './styles';
+import classNames from 'classnames';
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
@@ -17,10 +15,12 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 function Input({
   ref,
   name,
+  value,
   icon: Icon,
   type,
   className,
   register,
+  placeholder,
   error,
   ...rest
 }: InputProps): JSX.Element {
@@ -28,21 +28,31 @@ function Input({
   const IconPassword = showHide ? 'text' : 'password';
 
   const handleClick = React.useCallback(() => {
-    setShowHide(showHide => !showHide);
+    setShowHide((showHide) => !showHide);
   }, []);
+
+  const classes = classNames(
+    'input',
+    {
+      'is-error': error,
+      'is-icon': Icon,
+      'is-value': value,
+    },
+    className
+  );
 
   return (
     <>
-      <Label
-        className={classnames(className, error ? 'borderError' : '')}
-        error={error}
-      >
-        {Icon && <Icon size={28} />}
+      <label className={classes}>
+        {Icon && <Icon size={32} className="ml-5 mr-1" />}
+
+        <p className={value ? 'contains-text' : ''}>{placeholder}</p>
         <input
           {...rest}
+          value={value}
           name={name}
           type={type === 'password' ? IconPassword : type}
-          ref={e => {
+          ref={(e) => {
             if (register) {
               register(e);
             }
@@ -53,13 +63,21 @@ function Input({
         />
 
         {type === 'password' && !showHide && (
-          <AiOutlineEyeInvisible onClick={handleClick} size={30} />
+          <AiOutlineEyeInvisible
+            onClick={handleClick}
+            className="mr-5"
+            size={34}
+          />
         )}
         {type === 'password' && showHide && (
-          <AiOutlineEye onClick={handleClick} size={30} />
+          <AiOutlineEye onClick={handleClick} className="mr-5" size={34} />
         )}
-      </Label>
-      {error && <Error>{error}</Error>}
+      </label>
+      {error && (
+        <span className="animate-animatop block text-3xs text-red ml-2 mb-1">
+          {error}
+        </span>
+      )}
     </>
   );
 }

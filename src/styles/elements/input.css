@@ -1,0 +1,13 @@
+.input {
+  @mixin input-default;
+
+  &.is-error {
+    @mixin input-error;
+  }
+
+  &.is-value {
+    input {
+      @apply mt-3;
+    }
+  }
+}

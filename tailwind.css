@@ -4,6 +4,7 @@
 @import './src/styles/mixins/button.css';
 @import './src/styles/mixins/link.css';
 @import './src/styles/mixins/card.css';
+@import './src/styles/mixins/input.css';
 
 @import './src/styles/elements/elements.css';
 @import './src/styles/compoents/components.css';

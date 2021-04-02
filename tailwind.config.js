@@ -2,8 +2,49 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      transitionDuration: {
+        0: '0ms',
+        2000: '2000ms',
+      },
+
+      spacing: {
+        13: '3.375rem', // 50px
+      },
+
+      animation: {
+        animatop: 'animatop 0.4s backwards',
+        animaplaceholder: 'animaplaceholder .4s',
+      },
+
+      keyframes: {
+        animatop: {
+          from: {
+            opacity: '0',
+            transform: 'translateY(-20px)',
+          },
+
+          to: {
+            opacity: '1',
+            transform: 'translateY(0)',
+          },
+        },
+
+        animaplaceholder: {
+          from: {
+            transform: 'translateY(8px)',
+            // transform: 'scale(1)',
+          },
+
+          to: {
+            transform: 'translateY(0)',
+            // transform: 'scale(0.9)',
+          },
+        },
+      },
+    },
     fontSize: {
+      '4xs': '0.625rem', //10px
       '3xs': '0.75rem', // 12px
       '2xs': '0.875rem', // 14px
       xs: '1rem', // 16px
@@ -36,6 +77,7 @@ module.exports = {
       green: { 100: '#ADFF9F', 200: '#88DD7A' },
       blue: { 100: '#64A4ED', 200: '#4887CE' },
       'blue-dark': '#243B55',
+      'blue-input': '#0F1829',
       'blue-card': '#405B79',
       disabled: '#ADCCF0',
     },
