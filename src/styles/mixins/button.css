@@ -1,5 +1,5 @@
 @define-mixin button-default {
-  @apply h-13 px-5 rounded-lg flex flex-row items-center	justify-center;
+  @apply h-13 px-5 rounded-lg flex flex-row items-center justify-center;
   @apply bg-blue-100 text-sm text-blue-dark font-semibold;
   @apply transition duration-200 ease-in;
 
@@ -9,9 +9,14 @@
 
   &:disabled {
     @apply bg-disabled cursor-not-allowed;
+
+    &:hover {
+      @apply bg-disabled;
+    }
   }
 
   &:hover {
+    @apply bg-blue-hover;
   }
 
   &.is-small {
@@ -27,7 +32,7 @@
   @apply text-blue-100 bg-transparent border-blue-100 border-2;
 
   &:hover {
-    @apply text-blue-100 border-blue-100;
+    @apply bg-blue-100 text-blue-dark;
   }
 
   &:disabled {

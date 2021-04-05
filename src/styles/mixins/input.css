@@ -16,41 +16,47 @@
 
   &.is-icon {
     p {
-      @apply ml-14;
+      @apply ml-16;
     }
   }
 
-  &:focus-within,
   &:active {
+    p {
+      @apply top-0.5 text-4xs;
+    }
+
+    input {
+      @apply mt-3;
+    }
+  }
+
+  &:focus-within {
     @apply border-blue-100;
 
     svg {
       @apply fill-current text-blue-100;
     }
 
-    div[atr*='test'] {
-      background: #ffff00;
-    }
-
     p:not([class*='contains-text']) {
       @mixin placeholder-default;
       @apply top-0.5 text-4xs;
-      @apply animate-animaplaceholder;
+      @apply animate-animaPlaceholderTop;
     }
 
-    input {
+    input:not([class*='contains-text']) {
       @apply mt-3;
+      @apply animate-animaPlaceholderTop;
     }
 
     &.is-icon {
       p {
-        @apply ml-14;
+        @apply ml-16;
       }
     }
   }
 
   input {
-    @apply h-13 w-full mx-5 text-xs text-white-100 border-0 bg-transparent;
+    @apply h-13 w-full mx-5 text-xs text-white-100 border-0 bg-transparent mt-3;
 
     &::placeholder {
       @apply text-gray;

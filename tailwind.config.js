@@ -14,7 +14,7 @@ module.exports = {
 
       animation: {
         animatop: 'animatop 0.4s backwards',
-        animaplaceholder: 'animaplaceholder .4s',
+        animaPlaceholderTop: 'animaPlaceholderTop .4s',
       },
 
       keyframes: {
@@ -30,15 +30,23 @@ module.exports = {
           },
         },
 
-        animaplaceholder: {
+        animaPlaceholderTop: {
           from: {
             transform: 'translateY(8px)',
-            // transform: 'scale(1)',
           },
 
           to: {
             transform: 'translateY(0)',
-            // transform: 'scale(0.9)',
+          },
+        },
+
+        animaPlaceholderBottom: {
+          from: {
+            transform: 'translateY(-8px)',
+          },
+
+          to: {
+            transform: 'translateY(0)',
           },
         },
       },
@@ -75,7 +83,7 @@ module.exports = {
       gray: '#A0A2A4',
       red: '#FB8686',
       green: { 100: '#ADFF9F', 200: '#88DD7A' },
-      blue: { 100: '#64A4ED', 200: '#4887CE' },
+      blue: { 100: '#64A4ED', 200: '#4887CE', hover: '#4587D2' },
       'blue-dark': '#243B55',
       'blue-input': '#0F1829',
       'blue-card': '#405B79',

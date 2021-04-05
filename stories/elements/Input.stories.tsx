@@ -8,23 +8,41 @@ import { Input, Button } from '../../src';
 export default { title: 'Elements/Input' };
 
 export function Default() {
+  const [value, setValue] = React.useState('');
+
   return (
     <div style={{ width: '360px' }}>
-      <Input name="captalento" placeholder="Email" type="text" />
+      <Input
+        name="captalento"
+        placeholder="Email"
+        type="text"
+        value={value}
+        onChange={({ target }) => setValue(target.value)}
+      />
     </div>
   );
 }
 
 export function Focus() {
+  const [value, setValue] = React.useState('');
+
   return (
     <div style={{ width: '360px' }}>
-      <Input autoFocus name="captalento" placeholder="Email" type="text" />
+      <Input
+        autoFocus
+        name="captalento"
+        placeholder="Email"
+        type="text"
+        value={value}
+        onChange={({ target }) => setValue(target.value)}
+      />
     </div>
   );
 }
 
 export function Error() {
   const [value, setValue] = React.useState('');
+
   return (
     <div style={{ width: '360px' }}>
       <Input
@@ -40,6 +58,8 @@ export function Error() {
 }
 
 export function Icon() {
+  const [value, setValue] = React.useState('');
+
   return (
     <div style={{ width: '360px' }}>
       <Input
@@ -47,12 +67,16 @@ export function Icon() {
         placeholder="Digite seu primeiro nome"
         type="text"
         icon={AiOutlineUser}
+        value={value}
+        onChange={({ target }) => setValue(target.value)}
       />
     </div>
   );
 }
 
 export function IconFocus() {
+  const [value, setValue] = React.useState('');
+
   return (
     <div style={{ width: '360px' }}>
       <Input
@@ -61,19 +85,25 @@ export function IconFocus() {
         placeholder="Digite seu primeiro nome"
         type="text"
         icon={AiOutlineUser}
+        value={value}
+        onChange={({ target }) => setValue(target.value)}
       />
     </div>
   );
 }
 
 export function IconError() {
+  const [value, setValue] = React.useState('');
+
   return (
     <div style={{ width: '360px' }}>
       <Input
         name="captalento"
-        placeholder="Digite seu primeiro nome"
+        placeholder="Nome"
         type="text"
         icon={AiOutlineUser}
+        value={value}
+        onChange={({ target }) => setValue(target.value)}
         error={'Message error descripition'}
       />
     </div>
@@ -81,9 +111,17 @@ export function IconError() {
 }
 // IconError.storyName= 'Icon error';
 export function TypePassword() {
+  const [value, setValue] = React.useState('');
+
   return (
     <div style={{ width: '360px' }}>
-      <Input name="captalento" placeholder="Digite sua senha" type="password" />
+      <Input
+        name="captalento"
+        placeholder="Digite sua senha"
+        type="password"
+        value={value}
+        onChange={({ target }) => setValue(target.value)}
+      />
     </div>
   );
 }
@@ -91,6 +129,8 @@ export function TypePassword() {
 TypePassword.storyName = 'Type password';
 
 export function TypePasswordWithIcon() {
+  const [value, setValue] = React.useState('');
+
   return (
     <div style={{ width: '360px' }}>
       <Input
@@ -98,6 +138,8 @@ export function TypePasswordWithIcon() {
         placeholder="Digite sua senha"
         type="password"
         icon={BiLockAlt}
+        value={value}
+        onChange={({ target }) => setValue(target.value)}
       />
     </div>
   );
