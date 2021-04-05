@@ -16,7 +16,7 @@
   }
 }
 
-@define-mixin title-small {
+@define-mixin title-sm {
   @mixin title-shared;
   @apply text-lg leading-none;
 
@@ -25,7 +25,7 @@
   }
 }
 
-@define-mixin title-large {
+@define-mixin title-lg {
   @mixin title-shared;
   @apply text-4xl leading-none;
 
@@ -38,7 +38,7 @@
   }
 }
 
-@define-mixin title-largest {
+@define-mixin title-xl {
   @mixin title-shared;
   @apply text-6xl leading-none;
 
@@ -58,15 +58,15 @@
 @define-mixin responsive-title {
   @mixin title-default;
 
-  &.is-small {
-    @mixin title-small;
+  &.is-sm {
+    @mixin title-sm;
   }
 
-  &.is-large {
-    @mixin title-large;
+  &.is-lg {
+    @mixin title-lg;
   }
 
-  &.is-largest {
-    @mixin title-largest;
+  &.is-xl {
+    @mixin title-xl;
   }
 }

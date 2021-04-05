@@ -57,7 +57,7 @@ module.exports = {
       '2xs': '0.875rem', // 14px
       xs: '1rem', // 16px
       sm: '1.125rem', // 18px
-      base: '1.25rem', // 20px
+      md: '1.25rem', // 20px
       lg: '1.5rem', // 24px
       xl: '1.75rem', // 28px
       '2xl': '2rem', // 32px

@@ -1,51 +1,47 @@
 @define-mixin text-default {
-  @apply text-xs leading-normal;
-
-  @screen sm {
-    @apply text-sm leading-snug;
-  }
-
-  @screen xl {
-    @apply text-base leading-tight;
-  }
+  @apply font-normal text-white-100 text-sm;
 }
 
-@define-mixin text-small {
-  @apply text-2xs leading-tight;
-
-  @screen sm {
-    @apply text-xs leading-normal;
-  }
-
-  @screen xl {
-    @apply text-sm leading-tight;
-  }
+@define-mixin text-xs {
+  @apply text-xs;
 }
 
-@define-mixin text-large {
-  @apply text-sm leading-tight;
+@define-mixin text-sm {
+  @apply text-sm;
+}
 
-  @screen sm {
-    @apply text-base leading-snug;
-  }
+@define-mixin text-md {
+  @apply text-md;
+}
 
-  @screen xl {
-    @apply text-lg leading-snug;
-  }
+@define-mixin text-lg {
+  @apply text-lg;
+}
+
+@define-mixin text-xl {
+  @apply text-xl;
 }
 
 @define-mixin responsive-text {
   @mixin text-default;
 
-  &.is-small {
-    @mixin text-small;
+  &.is-xs {
+    @mixin text-xs;
   }
 
-  &.is-medium {
-    @mixin text-default;
+  &.is-sm {
+    @mixin text-sm;
   }
 
-  &.is-large {
-    @mixin text-large;
+  &.is-md {
+    @mixin text-md;
+  }
+
+  &.is-lg {
+    @mixin text-lg;
+  }
+
+  &.is-xl {
+    @mixin text-xl;
   }
 }
