@@ -1,6 +1,6 @@
 {
   "name": "captalento-system-ui",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "author": "Isaias Mendes",
   "description": "Componentes do site captalento",
   "main": "dist/index.js",
@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "tsdx watch",
-    "build": "NODE_ENV=production tsdx build && postcss --output dist/css/system-ui.css tailwind.css",
+    "build": "NODE_ENV=production tsdx build && npm run build:css",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
     "prepare": "npm run build",
