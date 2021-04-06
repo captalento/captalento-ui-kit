@@ -14,7 +14,7 @@ export interface LinkProps
 
 function Link({
   icon: Icon,
-  size = 'xs',
+  size = 'x-small',
   variant = 'white',
   isButton,
   isOutline,

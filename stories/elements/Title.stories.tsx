@@ -18,7 +18,7 @@ export function DefaultH2() {
 
 export function OtherSize() {
   return (
-    <Title tag="h2" size="xs">
+    <Title tag="h2" size="x-small">
       captalento
     </Title>
   );

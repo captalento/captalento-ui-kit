@@ -28,7 +28,7 @@ export function Color() {
 
 export function OtherSize() {
   return (
-    <Text size="lg">
+    <Text size="large">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
       blanditiis nostrum soluta nulla quisquam enim iure impedit et delectus
       facere aut, fugiat doloribus quos corrupti perferendis rem quasi expedita

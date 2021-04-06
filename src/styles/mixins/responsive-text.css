@@ -1,12 +1,12 @@
-@define-mixin font-default {
+@define-mixin text-default {
   @apply font-normal text-white-100 text-sm;
 }
 
-@define-mixin font-xs {
+@define-mixin text-x-small {
   @apply text-xs;
 }
 
-@define-mixin font-sm {
+@define-mixin text-small {
   @apply text-xs;
 
   @screen lg {
@@ -14,7 +14,7 @@
   }
 }
 
-@define-mixin font-md {
+@define-mixin text-medium {
   @apply text-sm;
 
   @screen lg {
@@ -22,7 +22,7 @@
   }
 }
 
-@define-mixin font-lg {
+@define-mixin text-large {
   @apply text-md;
 
   @screen lg {
@@ -30,30 +30,30 @@
   }
 }
 
-@define-mixin font-xl {
+@define-mixin text-x-large {
   @apply text-xl;
 }
 
 @define-mixin responsive-text {
-  @mixin font-default;
+  @mixin text-default;
 
-  &.is-xs {
-    @mixin font-xs;
+  &.is-x-small {
+    @mixin text-x-small;
   }
 
-  &.is-sm {
-    @mixin font-sm;
+  &.is-small {
+    @mixin text-small;
   }
 
-  &.is-md {
-    @mixin font-md;
+  &.is-medium {
+    @mixin text-medium;
   }
 
-  &.is-lg {
-    @mixin font-lg;
+  &.is-large {
+    @mixin text-large;
   }
 
-  &.is-xl {
-    @mixin font-xl;
+  &.is-x-large {
+    @mixin text-x-large;
   }
 }
