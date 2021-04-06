@@ -1,47 +1,59 @@
-@define-mixin text-default {
+@define-mixin font-default {
   @apply font-normal text-white-100 text-sm;
 }
 
-@define-mixin text-xs {
+@define-mixin font-xs {
   @apply text-xs;
 }
 
-@define-mixin text-sm {
+@define-mixin font-sm {
+  @apply text-xs;
+
+  @screen lg {
+    @apply text-sm;
+  }
+}
+
+@define-mixin font-md {
   @apply text-sm;
+
+  @screen lg {
+    @apply text-md;
+  }
 }
 
-@define-mixin text-md {
+@define-mixin font-lg {
   @apply text-md;
+
+  @screen lg {
+    @apply text-lg;
+  }
 }
 
-@define-mixin text-lg {
-  @apply text-lg;
-}
-
-@define-mixin text-xl {
+@define-mixin font-xl {
   @apply text-xl;
 }
 
 @define-mixin responsive-text {
-  @mixin text-default;
+  @mixin font-default;
 
   &.is-xs {
-    @mixin text-xs;
+    @mixin font-xs;
   }
 
   &.is-sm {
-    @mixin text-sm;
+    @mixin font-sm;
   }
 
   &.is-md {
-    @mixin text-md;
+    @mixin font-md;
   }
 
   &.is-lg {
-    @mixin text-lg;
+    @mixin font-lg;
   }
 
   &.is-xl {
-    @mixin text-xl;
+    @mixin font-xl;
   }
 }

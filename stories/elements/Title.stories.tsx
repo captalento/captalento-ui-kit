@@ -15,3 +15,11 @@ export function DefaultH2() {
     </Title>
   );
 }
+
+export function OtherSize() {
+  return (
+    <Title tag="h2" size="xs">
+      captalento
+    </Title>
+  );
+}

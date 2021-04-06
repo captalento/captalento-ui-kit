@@ -1,65 +1,48 @@
-@define-mixin title-shared {
-  @apply font-bold;
-  word-wrap: break-word;
+@define-mixin title-default {
+  @apply font-bold text-white-100 text-2xl;
 }
 
-@define-mixin title-default {
-  @mixin title-shared;
-  @apply text-2xl leading-none;
-
-  @screen sm {
-    @apply text-3xl;
-  }
-
-  @screen xl {
-    @apply text-6xl;
-  }
+@define-mixin title-xs {
+  @apply text-sm;
 }
 
 @define-mixin title-sm {
-  @mixin title-shared;
-  @apply text-lg leading-none;
+  @apply text-md;
+}
 
-  @screen xl {
-    @apply text-2xl;
+@define-mixin title-md {
+  @apply text-2xl;
+
+  @screen lg {
+    @apply text-5xl;
   }
 }
 
 @define-mixin title-lg {
-  @mixin title-shared;
-  @apply text-4xl leading-none;
+  @apply text-3xl;
 
-  @screen sm {
-    @apply text-5xl leading-none;
-  }
-
-  @screen xl {
+  @screen lg {
     @apply text-7xl;
   }
 }
 
 @define-mixin title-xl {
-  @mixin title-shared;
-  @apply text-6xl leading-none;
-
-  @screen sm {
-    @apply text-7xl leading-none;
-  }
-
-  @screen lg {
-    @apply text-8xl leading-none;
-  }
-
-  @screen xl {
-    @apply text-9xl leading-none;
-  }
+  @apply text-xl;
 }
 
 @define-mixin responsive-title {
   @mixin title-default;
 
+  &.is-xs {
+    @mixin title-xs;
+  }
+
   &.is-sm {
     @mixin title-sm;
+  }
+
+  &.is-md {
+    @mixin title-md;
   }
 
   &.is-lg {
