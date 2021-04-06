@@ -14,7 +14,7 @@
   @apply text-2xl;
 
   @screen lg {
-    @apply text-5xl;
+    @apply text-2.5xl;
   }
 }
 
@@ -22,7 +22,7 @@
   @apply text-3xl;
 
   @screen lg {
-    @apply text-7xl;
+    @apply text-5xl;
   }
 }
 
