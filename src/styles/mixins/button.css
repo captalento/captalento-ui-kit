@@ -1,38 +1,28 @@
 @define-mixin button-default {
-  @apply h-13 px-5 rounded-lg flex flex-row items-center justify-center;
-  @apply bg-blue-100 text-sm text-blue-dark font-semibold;
+  @apply rounded-lg flex flex-row items-center justify-center;
+  @apply text-blue-dark font-semibold;
   @apply transition duration-200 ease-in;
 
-  &:focus {
-    outline: none;
-  }
-
-  &:disabled {
-    @apply bg-disabled cursor-not-allowed;
-
-    &:hover {
-      @apply bg-disabled;
-    }
-  }
-
-  &:hover {
-    @apply bg-blue-hover;
-  }
-
   &.is-small {
-    @apply h-10 px-6;
+    @apply h-10 text-xs px-4;
   }
 
-  &.is-large {
-    @apply h-16;
+  &.is-medium {
+    @apply h-13 text-sm px-5;
+  }
+
+  &:focus {
+    @apply outline-none;
   }
 }
 
 @define-mixin button-outlined {
-  @apply text-blue-100 bg-transparent border-blue-100 border-2;
+  &.is-blue {
+    @apply text-blue-100 bg-transparent border-blue-100 border-2;
+  }
 
-  &:hover {
-    @apply bg-blue-100 text-blue-dark;
+  &.is-green {
+    @apply text-green-100 bg-transparent border-green-100 border-2;
   }
 
   &:disabled {

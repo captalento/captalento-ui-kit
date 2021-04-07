@@ -1,0 +1,21 @@
+@define-mixin bg-variants {
+  &.is-white {
+    @apply bg-white-100;
+  }
+
+  &.is-black {
+    @apply bg-black;
+  }
+
+  &.is-blue {
+    @apply bg-blue-100;
+  }
+
+  &.is-green {
+    @apply bg-green-100;
+  }
+
+  &.is-red {
+    @apply bg-red;
+  }
+}

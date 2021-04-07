@@ -6,7 +6,7 @@ import { Size, Variant } from '../../common';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   outlined?: boolean;
-  size?: Size;
+  size?: Exclude<Size, 'x-small' | 'large' | 'x-large'>;
   variant?: Variant;
   icon?: React.ComponentType<IconBaseProps> | null;
   ref?: React.RefObject<HTMLButtonElement> | null | undefined;

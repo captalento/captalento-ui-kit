@@ -1,4 +1,5 @@
 @import './src/styles/mixins/font-variants.css';
+@import './src/styles/mixins/bg-variants.css';
 @import './src/styles/mixins/responsive-title.css';
 @import './src/styles/mixins/responsive-text.css';
 @import './src/styles/mixins/button.css';

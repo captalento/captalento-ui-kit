@@ -6,23 +6,46 @@ import { Button } from '../../src';
 export default { title: 'Elements/Button' };
 
 export function Default() {
-  return <Button>Entrar</Button>;
+  return (
+    <div>
+      <Button className="mb-4">Entrar</Button>
+      <Button variant="green">Entrar</Button>
+    </div>
+  );
 }
 
 export function Disabled() {
-  return <Button disabled={true}>Disabled</Button>;
+  return (
+    <div>
+      <Button disabled className="mb-4">
+        Aguarde...
+      </Button>
+      <Button disabled variant="green">
+        Aguarde...
+      </Button>
+    </div>
+  );
 }
 
-export function Outlined() {
-  return <Button outlined>Outlined</Button>;
+export function Outlineds() {
+  return (
+    <div>
+      <Button outlined className="mb-4">
+        Outlined
+      </Button>
+      <Button outlined variant="green">
+        Outlined
+      </Button>
+    </div>
+  );
 }
 
 export function WithIcon() {
-  return (
-    <Button className="" icon={RiArrowRightLine}>
-      Logar
-    </Button>
-  );
+  return <Button icon={RiArrowRightLine}>Logar</Button>;
+}
+
+export function OtherSize() {
+  return <Button size="small">Logar</Button>;
 }
 
 // WithIcon.storyName = 'with icon';

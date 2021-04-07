@@ -1,11 +1,60 @@
 .button {
   @mixin button-default;
+  @mixin bg-variants;
 
   &.is-outlined {
     @mixin button-outlined;
+
+    &:hover {
+      @apply bg-blue-100 text-blue-dark;
+    }
   }
 
   &.is-icon {
     @mixin button-icon;
+  }
+
+  &.is-blue {
+    @apply text-blue-dark;
+
+    &:hover {
+      @apply bg-blue-200;
+    }
+
+    &.is-outlined {
+      &:hover {
+        @apply bg-blue-100 text-blue-dark;
+      }
+    }
+
+    &:disabled {
+      @apply bg-blue-disabled cursor-not-allowed;
+
+      &:hover {
+        @apply bg-blue-disabled;
+      }
+    }
+  }
+
+  &.is-green {
+    @apply text-green-dark;
+
+    &:hover {
+      @apply bg-green-200;
+    }
+
+    &.is-outlined {
+      &:hover {
+        @apply bg-green-100 text-green-dark;
+      }
+    }
+
+    &:disabled {
+      @apply bg-green-disabled cursor-not-allowed;
+
+      &:hover {
+        @apply bg-green-disabled;
+      }
+    }
   }
 }
