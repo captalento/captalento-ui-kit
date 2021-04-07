@@ -7,6 +7,7 @@ export interface LinkProps
   extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   icon?: React.ComponentType<IconBaseProps>;
   size?: Size;
+  sizeButton?: 'b-small' | 'b-medium';
   variant?: Variant;
   isOutline?: boolean;
   isButton?: boolean;
@@ -16,6 +17,7 @@ function Link({
   icon: Icon,
   size = 'x-small',
   variant = 'white',
+  sizeButton = 'b-medium',
   isButton,
   isOutline,
   href,
@@ -27,6 +29,7 @@ function Link({
     {
       [`is-${size}`]: true,
       [`is-${variant}`]: true,
+      [`is-${sizeButton}`]: true,
       'is-outline': isButton && isOutline,
       'is-button': isButton,
       'is-icon': Icon,

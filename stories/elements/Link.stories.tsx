@@ -38,11 +38,15 @@ export function Outline() {
 
 export function ButtonWithIcon() {
   return (
-    <Link
-      href="http://app.captalento.com/"
-      icon={HiArrowNarrowRight}
-      isButton
-    >
+    <Link href="http://app.captalento.com/" icon={HiArrowNarrowRight} isButton>
+      Cadastrar
+    </Link>
+  );
+}
+
+export function ButtonOtherSize() {
+  return (
+    <Link sizeButton="b-small" href="http://app.captalento.com/" isButton>
       Cadastrar
     </Link>
   );

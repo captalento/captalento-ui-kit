@@ -14,9 +14,17 @@
 }
 
 @define-mixin default-link-button {
-  @apply h-13 px-5 rounded-lg flex flex-row items-center justify-center;
-  @apply bg-blue-100 text-sm text-blue-dark font-semibold;
+  @apply rounded-lg flex flex-row items-center justify-center;
+  @apply bg-blue-100 text-blue-dark font-semibold;
   @apply transition duration-200 ease-in;
+
+  &.is-b-small {
+    @apply h-10 text-xs px-4;
+  }
+
+  &.is-b-medium {
+    @apply h-13 px-5 text-sm;
+  }
 }
 
 @define-mixin is-icon {
