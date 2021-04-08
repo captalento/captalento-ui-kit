@@ -121,6 +121,7 @@ export function TypePassword() {
         type="password"
         value={value}
         onChange={({ target }) => setValue(target.value)}
+        
       />
     </div>
   );

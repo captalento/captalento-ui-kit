@@ -3,6 +3,7 @@ import { IconBaseProps } from 'react-icons';
 import { AiOutlineEyeInvisible, AiOutlineEye } from 'react-icons/ai';
 import classNames from 'classnames';
 
+
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
   type: string;
@@ -25,7 +26,6 @@ function Input({
   ...rest
 }: InputProps): JSX.Element {
   const [showHide, setShowHide] = React.useState(false);
-  const [hasFocus, setHasFocus] = React.useState<boolean | null>(null);
   const IconPassword = showHide ? 'text' : 'password';
 
   const handleClick = React.useCallback(() => {
@@ -49,8 +49,8 @@ function Input({
 
         <p
           className={`
-          ${value || hasFocus ? 'contains-text' : ''} 
-          ${hasFocus === false ? 'animate-animaPlaceholderBottom' : ''}
+          ${value  ? 'contains-text' : ''} 
+          
         `}
         >
           {placeholder}
@@ -58,7 +58,7 @@ function Input({
 
         <input
           {...rest}
-          className={`${value || hasFocus ? 'contains-text' : ''}`}
+          className={`${value ? 'contains-text' : ''}`}
           value={value}
           name={name}
           type={type === 'password' ? IconPassword : type}
@@ -70,8 +70,6 @@ function Input({
               ref.current = e;
             }
           }}
-          onFocus={() => setHasFocus(true)}
-          onBlur={() => setHasFocus(false)}
         />
 
         {type === 'password' && !showHide && (
