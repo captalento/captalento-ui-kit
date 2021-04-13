@@ -1,0 +1,10 @@
+.contant-modal {
+  @apply w-screen h-screen bg-blue-dark z-10 flex justify-center;
+  @apply items-center fixed inset-0;
+
+  background: rgba(36, 59, 85, 0.5);
+}
+
+.modal {
+  @apply z-20	bg-white-100 rounded-2xl animate-animaShow shadow;
+}

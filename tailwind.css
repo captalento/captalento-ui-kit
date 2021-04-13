@@ -8,7 +8,7 @@
 @import './src/styles/mixins/input.css';
 
 @import './src/styles/elements/elements.css';
-@import './src/styles/compoents/components.css';
+@import './src/styles/components/components.css';
 
 @tailwind base;
 @tailwind components;

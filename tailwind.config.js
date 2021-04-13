@@ -14,6 +14,7 @@ module.exports = {
 
       animation: {
         animatop: 'animatop 0.4s backwards',
+        animaShow: 'animaShow 0.3s backwards',
         animaPlaceholderTop: 'animaPlaceholderTop .4s',
       },
 
@@ -27,6 +28,16 @@ module.exports = {
           to: {
             opacity: '1',
             transform: 'translateY(0)',
+          },
+        },
+
+        animaShow: {
+          from: {
+            transform: 'scale(0)',
+          },
+
+          to: {
+            transform: 'scale(1)',
           },
         },
 
@@ -79,7 +90,7 @@ module.exports = {
     },
     colors: {
       transparent: 'transparent',
-      black: '#000',
+      black: '#2b2b2b',
       white: { 100: '#EDEFF9', 200: '#8E92A3' },
       gray: '#A0A2A4',
       red: '#FB8686',

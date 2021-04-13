@@ -18,4 +18,8 @@
   &.is-red {
     @apply text-red;
   }
+
+  &.is-blue-dark {
+    @apply text-blue-dark;
+  }
 }
