@@ -1,6 +1,6 @@
 {
   "name": "captalento-system-ui",
-  "version": "2.5.1",
+  "version": "2.5.2",
   "author": "Isaias Mendes",
   "description": "Componentes do site captalento",
   "main": "dist/index.js",
