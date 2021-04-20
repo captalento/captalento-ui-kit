@@ -17,12 +17,24 @@
 }
 
 @define-mixin button-outlined {
+  &.is-white {
+    @apply text-white-100 bg-transparent border-white-100 border-2;
+  }
+
   &.is-blue {
     @apply text-blue-100 bg-transparent border-blue-100 border-2;
   }
 
   &.is-green {
     @apply text-green-100 bg-transparent border-green-100 border-2;
+  }
+
+  &.is-purple {
+    @apply text-purple-100 bg-transparent border-purple-100 border-2;
+  }
+
+  &.is-red {
+    @apply text-red-100 bg-transparent border-red-100 border-2;
   }
 
   &:disabled {

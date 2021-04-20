@@ -7,9 +7,12 @@ export default { title: 'Elements/Button' };
 
 export function Default() {
   return (
-    <div>
-      <Button className="mb-4">Entrar</Button>
+    <div className="grid gap-y-4">
+      <Button variant="white">Entrar</Button>
+      <Button>Entrar</Button>
       <Button variant="green">Entrar</Button>
+      <Button variant="purple">Entrar</Button>
+      <Button variant="red">Entrar</Button>
     </div>
   );
 }
@@ -17,9 +20,7 @@ export function Default() {
 export function Disabled() {
   return (
     <div>
-      <Button disabled className="mb-4">
-        Aguarde...
-      </Button>
+      <Button disabled>Aguarde...</Button>
       <Button disabled variant="green">
         Aguarde...
       </Button>
@@ -29,11 +30,18 @@ export function Disabled() {
 
 export function Outlineds() {
   return (
-    <div>
-      <Button outlined className="mb-4">
+    <div className="grid gap-y-4">
+      <Button outlined variant="white">
         Outlined
       </Button>
+      <Button outlined>Outlined</Button>
       <Button outlined variant="green">
+        Outlined
+      </Button>
+      <Button outlined variant="purple">
+        Outlined
+      </Button>
+      <Button outlined variant="red">
         Outlined
       </Button>
     </div>

@@ -32,7 +32,7 @@ export function WithIcon() {
 
 export function Button() {
   return (
-    <>
+    <div className="grid gap-y-4">
       <div className="w-72">
         <Link href="http://app.captalento.com/" isButton>
           Cadastrar
@@ -58,12 +58,12 @@ export function Button() {
           Cadastrar
         </Link>
       </div>
-    </>
+    </div>
   );
 }
 export function Outline() {
   return (
-    <>
+    <div className="grid gap-y-4">
       <div className="w-72">
         <Link href="http://app.captalento.com/" isButton isOutline>
           Cadastrar
@@ -109,7 +109,7 @@ export function Outline() {
           Cadastrar
         </Link>
       </div>
-    </>
+    </div>
   );
 }
 
