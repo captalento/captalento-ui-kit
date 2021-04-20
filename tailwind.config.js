@@ -14,6 +14,7 @@ module.exports = {
 
       animation: {
         animatop: 'animatop 0.4s backwards',
+        animaRigth: 'animaRigth 0.4s backwards',
         animaShow: 'animaShow 0.3s backwards',
         animaPlaceholderTop: 'animaPlaceholderTop .4s',
       },
@@ -28,6 +29,18 @@ module.exports = {
           to: {
             opacity: '1',
             transform: 'translateY(0)',
+          },
+        },
+
+        animaRigth: {
+          from: {
+            opacity: '0',
+            transform: 'translateX(420px)',
+          },
+
+          to: {
+            opacity: '1',
+            transform: 'translateX(0)',
           },
         },
 
