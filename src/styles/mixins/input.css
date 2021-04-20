@@ -70,9 +70,9 @@
 }
 
 @define-mixin input-error {
-  @apply border-red;
+  @apply border-red-100;
 
   svg {
-    @apply fill-current text-red;
+    @apply fill-current text-red-100;
   }
 }

@@ -6,7 +6,20 @@ import { Link } from '../../src';
 export default { title: 'Elements/Link' };
 
 export function Default() {
-  return <Link href="http://app.captalento.com/">Cadastrar</Link>;
+  return (
+    <div className="flex flex-col">
+      <Link href="http://app.captalento.com/">Cadastrar</Link>
+      <Link variant="blue" href="http://app.captalento.com/">
+        Cadastrar
+      </Link>
+      <Link variant="green" href="http://app.captalento.com/">
+        Cadastrar
+      </Link>
+      <Link variant="purple" href="http://app.captalento.com/">
+        Cadastrar
+      </Link>
+    </div>
+  );
 }
 
 export function WithIcon() {
@@ -19,20 +32,84 @@ export function WithIcon() {
 
 export function Button() {
   return (
-    <div className="w-72">
-      <Link href="http://app.captalento.com/" isButton>
-        Cadastrar
-      </Link>
-    </div>
+    <>
+      <div className="w-72">
+        <Link href="http://app.captalento.com/" isButton>
+          Cadastrar
+        </Link>
+      </div>
+      <div className="w-72">
+        <Link variant="blue" href="http://app.captalento.com/" isButton>
+          Cadastrar
+        </Link>
+      </div>
+      <div className="w-72">
+        <Link variant="green" href="http://app.captalento.com/" isButton>
+          Cadastrar
+        </Link>
+      </div>
+      <div className="w-72">
+        <Link variant="purple" href="http://app.captalento.com/" isButton>
+          Cadastrar
+        </Link>
+      </div>
+      <div className="w-72">
+        <Link variant="red" href="http://app.captalento.com/" isButton>
+          Cadastrar
+        </Link>
+      </div>
+    </>
   );
 }
 export function Outline() {
   return (
-    <div className="w-72">
-      <Link href="http://app.captalento.com/" isButton isOutline>
-        Cadastrar
-      </Link>
-    </div>
+    <>
+      <div className="w-72">
+        <Link href="http://app.captalento.com/" isButton isOutline>
+          Cadastrar
+        </Link>
+      </div>
+      <div className="w-72">
+        <Link
+          variant="blue"
+          href="http://app.captalento.com/"
+          isButton
+          isOutline
+        >
+          Cadastrar
+        </Link>
+      </div>
+      <div className="w-72">
+        <Link
+          variant="green"
+          href="http://app.captalento.com/"
+          isButton
+          isOutline
+        >
+          Cadastrar
+        </Link>
+      </div>
+      <div className="w-72">
+        <Link
+          variant="purple"
+          href="http://app.captalento.com/"
+          isButton
+          isOutline
+        >
+          Cadastrar
+        </Link>
+      </div>
+      <div className="w-72">
+        <Link
+          variant="red"
+          href="http://app.captalento.com/"
+          isButton
+          isOutline
+        >
+          Cadastrar
+        </Link>
+      </div>
+    </>
   );
 }
 

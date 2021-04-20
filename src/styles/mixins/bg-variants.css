@@ -16,6 +16,6 @@
   }
 
   &.is-red {
-    @apply bg-red;
+    @apply bg-red-100;
   }
 }

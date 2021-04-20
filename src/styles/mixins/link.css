@@ -15,7 +15,7 @@
 
 @define-mixin default-link-button {
   @apply rounded-lg flex flex-row items-center justify-center;
-  @apply bg-blue-100 text-blue-dark font-semibold;
+  @apply text-black-200 font-semibold;
   @apply transition duration-200 ease-in;
 
   &.is-b-small {

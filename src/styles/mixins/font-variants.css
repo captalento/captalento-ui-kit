@@ -16,10 +16,14 @@
   }
 
   &.is-red {
-    @apply text-red;
+    @apply text-red-100;
   }
 
   &.is-blue-dark {
     @apply text-blue-dark;
+  }
+
+  &.is-purple {
+    @apply text-purple-100;
   }
 }

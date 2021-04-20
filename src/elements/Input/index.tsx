@@ -84,7 +84,7 @@ function Input({
         )}
       </label>
       {error && (
-        <span className="animate-animatop block text-3xs text-red ml-2 mb-1">
+        <span className="animate-animatop block text-3xs text-red-100 ml-2 mb-1">
           {error}
         </span>
       )}

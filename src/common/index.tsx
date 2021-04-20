@@ -5,7 +5,8 @@ export type Variant =
   | 'blue'
   | 'red'
   | 'green'
-  | 'blue-dark';
+  | 'blue-dark'
+  | 'purple';
 
 export interface IbaseProps {
   size: Size;
