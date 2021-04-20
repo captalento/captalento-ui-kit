@@ -17,7 +17,7 @@ export function Default() {
 
 export function Color() {
   return (
-    <Text variant="blue">
+    <Text variant="blue-dark">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
       blanditiis nostrum soluta nulla quisquam enim iure impedit et delectus
       facere aut, fugiat doloribus quos corrupti perferendis rem quasi expedita

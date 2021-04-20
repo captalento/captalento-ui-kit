@@ -1,5 +1,5 @@
 @define-mixin card-default {
-  @apply rounded-2xl bg-blue-card text-white-100;
+  @apply rounded-2xl bg-black-100 text-white-100;
 }
 
 @define-mixin effect-blue {

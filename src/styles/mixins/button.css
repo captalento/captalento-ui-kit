@@ -1,6 +1,6 @@
 @define-mixin button-default {
   @apply rounded-lg flex flex-row items-center justify-center;
-  @apply text-blue-dark font-semibold;
+  @apply text-black-200 font-semibold;
   @apply transition duration-200 ease-in;
 
   &.is-small {

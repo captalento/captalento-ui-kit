@@ -2,7 +2,7 @@
   @apply w-screen h-screen bg-blue-dark z-10 flex justify-center;
   @apply items-center fixed inset-0;
 
-  background: rgba(36, 59, 85, 0.5);
+  background: rgba(34, 38, 43, 0.6);
 }
 
 .modal {

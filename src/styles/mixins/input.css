@@ -3,8 +3,8 @@
 }
 
 @define-mixin input-default {
-  @apply h-13 flex items-center bg-blue-input rounded-lg;
-  @apply transition duration-500 border-2 border-blue-input relative;
+  @apply h-13 flex items-center bg-black-300 rounded-lg;
+  @apply transition duration-500 border-2 border-black-300 relative;
 
   p {
     @mixin placeholder-default;

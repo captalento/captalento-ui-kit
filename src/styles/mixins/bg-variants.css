@@ -4,7 +4,7 @@
   }
 
   &.is-black {
-    @apply bg-black;
+    @apply bg-black-200;
   }
 
   &.is-blue {

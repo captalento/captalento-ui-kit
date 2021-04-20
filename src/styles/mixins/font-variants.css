@@ -4,7 +4,7 @@
   }
 
   &.is-black {
-    @apply text-black;
+    @apply text-black-200;
   }
 
   &.is-blue {
