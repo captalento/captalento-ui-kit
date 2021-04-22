@@ -9,6 +9,7 @@
 
 @import './src/styles/elements/elements.css';
 @import './src/styles/components/components.css';
+@import './src/styles/stylesEffects/stylesEffects.css';
 
 @tailwind base;
 @tailwind components;

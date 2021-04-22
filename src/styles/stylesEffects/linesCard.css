@@ -1,0 +1,17 @@
+@define-mixin linesCard-default {
+  @apply h-0.5 rounded-l-none	rounded-r-full;
+}
+
+.linesCard {
+  .primaryLine {
+    @mixin linesCard-default;
+    @mixin bg-variants;
+    @apply w-8 mb-1.5;
+  }
+
+  .secondaryLine {
+    @mixin linesCard-default;
+    @mixin bg-variants;
+    @apply w-14;
+  }
+}

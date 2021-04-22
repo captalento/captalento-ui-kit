@@ -1,0 +1,27 @@
+.lineTitle {
+  @apply flex items-center;
+
+  .shape {
+    @mixin bg-variants;
+    @apply w-2.5 h-2.5;
+
+    &.outlined {
+      @mixin font-variants;
+      @apply border-2 bg-transparent;
+    }
+
+    &.is-circle {
+      @apply rounded-full;
+    }
+
+    &.is-square {
+      @apply transform rotate-45;
+    }
+  }
+
+  .line {
+    @mixin bg-variants;
+
+    @apply w-36	h-0.5 rounded-r-full;
+  }
+}
