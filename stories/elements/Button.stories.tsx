@@ -13,6 +13,7 @@ export function Default() {
       <Button variant="green">Entrar</Button>
       <Button variant="purple">Entrar</Button>
       <Button variant="red">Entrar</Button>
+      <Button variant="black">Entrar</Button>
     </div>
   );
 }
@@ -42,6 +43,9 @@ export function Outlineds() {
         Outlined
       </Button>
       <Button outlined variant="red">
+        Outlined
+      </Button>
+      <Button outlined variant="black">
         Outlined
       </Button>
     </div>

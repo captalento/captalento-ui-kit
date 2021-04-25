@@ -113,4 +113,26 @@
       }
     }
   }
+
+  &.is-black {
+    @apply text-white-100;
+
+    &:hover {
+      @apply bg-black-300;
+    }
+
+    &.is-outlined {
+      &:hover {
+        @apply bg-black-100 text-white-100;
+      }
+    }
+
+    &:disabled {
+      @apply bg-white-100 cursor-not-allowed;
+
+      &:hover {
+        @apply bg-white-100;
+      }
+    }
+  }
 }

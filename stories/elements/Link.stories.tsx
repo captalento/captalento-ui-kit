@@ -58,6 +58,11 @@ export function Button() {
           Cadastrar
         </Link>
       </div>
+      <div className="w-72">
+        <Link variant="black" href="http://app.captalento.com/" isButton>
+          Cadastrar
+        </Link>
+      </div>
     </div>
   );
 }
@@ -102,6 +107,16 @@ export function Outline() {
       <div className="w-72">
         <Link
           variant="red"
+          href="http://app.captalento.com/"
+          isButton
+          isOutline
+        >
+          Cadastrar
+        </Link>
+      </div>
+      <div className="w-72">
+        <Link
+          variant="black"
           href="http://app.captalento.com/"
           isButton
           isOutline

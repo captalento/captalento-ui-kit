@@ -72,6 +72,14 @@
         @apply bg-red-200 text-black-200;
       }
     }
+
+    &.is-black {
+      @apply bg-black-100 text-white-100;
+
+      &:hover {
+        @apply bg-black-300 text-white-100;
+      }
+    }
   }
 
   &.is-outline {
@@ -114,6 +122,14 @@
 
       &:hover {
         @apply bg-red-100 text-black-200;
+      }
+    }
+
+    &.is-black {
+      @apply text-black-100 bg-transparent border-black-100;
+
+      &:hover {
+        @apply bg-black-100 text-white-100;
       }
     }
   }

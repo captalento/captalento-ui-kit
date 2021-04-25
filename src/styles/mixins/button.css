@@ -37,6 +37,10 @@
     @apply text-red-100 bg-transparent border-red-100 border-2;
   }
 
+  &.is-black {
+    @apply text-black-100 bg-transparent border-black-100 border-2;
+  }
+
   &:disabled {
     @apply text-gray border-gray pointer-events-none;
   }
