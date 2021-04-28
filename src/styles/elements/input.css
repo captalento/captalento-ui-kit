@@ -1,13 +1,67 @@
 .input {
-  @mixin input-default;
+  @apply h-13 bg-black-300 rounded-lg transition duration-300 border-black-300 border-2	 flex flex-col justify-end;
 
-  &.is-error {
-    @mixin input-error;
+  svg {
+    @apply text-gray transition duration-300;
   }
 
-  &.is-value {
-    input {
-      @apply mt-3;
+  &:focus-within,
+  &:active {
+    @apply border-blue-100;
+
+    svg {
+      @apply text-blue-100;
+    }
+  }
+
+  &.error {
+    @apply border-red-100;
+
+    svg {
+      @apply text-red-100;
+    }
+  }
+
+  input:focus + label,
+  input:active + label {
+    transform: translateY(9px);
+
+    @apply text-3xs;
+  }
+
+  .control {
+    @apply relative;
+    @apply flex flex-1 flex-col justify-end;
+  }
+
+  .field {
+    background: none;
+
+    @apply outline-none;
+    @apply w-full bg-black-300 rounded-lg h-full border-0;
+    @apply text-gray text-xs leading-tight pt-4 px-5;
+
+    &.icon {
+      @apply px-12;
+    }
+  }
+
+  .label {
+    left: 8px;
+    @apply transition-all duration-200;
+    transform-origin: top left;
+    transform: translateY(21px);
+
+    @apply text-gray leading-tight pl-3;
+    @apply top-0 -mt-1 opacity-50 absolute;
+
+    &.is-shifted {
+      @apply text-3xs;
+      transform: translateY(9px);
+    }
+
+    &.icon {
+      @apply pl-10;
     }
   }
 }

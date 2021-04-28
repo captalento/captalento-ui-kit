@@ -1,29 +1,29 @@
 import React, { InputHTMLAttributes } from 'react';
+import classNames from 'classnames';
 import { IconBaseProps } from 'react-icons';
 import { AiOutlineEyeInvisible, AiOutlineEye } from 'react-icons/ai';
-import classNames from 'classnames';
-
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
-  type: string;
+  id: string;
+  label: string;
   error?: string;
   icon?: React.ComponentType<IconBaseProps>;
   register?: (e: HTMLInputElement | null) => void;
   ref?: React.MutableRefObject<HTMLInputElement | null>;
 }
 
-function Input({
-  ref,
-  name,
+export function Input({
+  className,
+  id,
   value,
+  error,
+  label,
   icon: Icon,
   type,
-  className,
   register,
-  placeholder,
-  error,
-  ...rest
+  ref,
+  ...props
 }: InputProps): JSX.Element {
   const [showHide, setShowHide] = React.useState(false);
   const IconPassword = showHide ? 'text' : 'password';
@@ -32,64 +32,60 @@ function Input({
     setShowHide((showHide) => !showHide);
   }, []);
 
-  const classes = classNames(
-    'input',
-    {
-      'is-error': error,
-      'is-icon': Icon,
-      'is-value': value,
-    },
-    className
-  );
-
   return (
     <>
-      <label className={classes}>
-        {Icon && <Icon size={32} className="ml-5 mr-1" />}
-
-        <p
-          className={`
-          ${value  ? 'contains-text' : ''} 
-          
-        `}
-        >
-          {placeholder}
-        </p>
-
-        <input
-          {...rest}
-          className={`${value ? 'contains-text' : ''}`}
-          value={value}
-          name={name}
-          type={type === 'password' ? IconPassword : type}
-          ref={(e) => {
-            if (register) {
-              register(e);
-            }
-            if (ref) {
-              ref.current = e;
-            }
-          }}
-        />
-
-        {type === 'password' && !showHide && (
-          <AiOutlineEyeInvisible
-            onClick={handleClick}
-            className="mr-5"
-            size={34}
+      <label
+        className={classNames(`input ${error ? 'error' : null}`, className)}
+      >
+        <div className="control">
+          <input
+            className={`field ${Icon ? 'icon' : null}`}
+            id={id}
+            value={value}
+            type={type === 'password' ? IconPassword : type}
+            ref={(e) => {
+              if (register) {
+                register(e);
+              }
+              if (ref) {
+                ref.current = e;
+              }
+            }}
+            {...props}
           />
-        )}
-        {type === 'password' && showHide && (
-          <AiOutlineEye onClick={handleClick} className="mr-5" size={34} />
-        )}
+
+          <label
+            className={classNames(`label ${Icon ? 'icon' : null}`, {
+              'is-shifted': type === 'date' || !!value,
+            })}
+            htmlFor={id}
+          >
+            {label}
+          </label>
+
+          {Icon ? <Icon size={26} className="absolute h-full ml-3" /> : null}
+
+          {type === 'password' ? (
+            <button
+              type="button"
+              className="absolute h-full right-0 mr-3 focus:outline-none"
+              onClick={handleClick}
+            >
+              {type === 'password' && !showHide && (
+                <AiOutlineEyeInvisible size={28} />
+              )}
+              {type === 'password' && showHide && <AiOutlineEye size={28} />}
+            </button>
+          ) : null}
+        </div>
+        {/* <span className={classNames('error', { 'is-active': !!error })}>
+      </span> */}
       </label>
-      {error && (
-        <span className="animate-animatop block text-3xs text-red-100 ml-2 mb-1">
+      {error ? (
+        <span className="text-3xs text-red-100 ml-2 animate-animaTop">
           {error}
         </span>
-      )}
+      ) : null}
     </>
   );
 }
-
-export { Input };

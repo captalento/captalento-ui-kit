@@ -9,7 +9,7 @@ addons.setConfig({
     colorSecondary: '#5987c1',
 
     appBg: '#0b0a0d',
-    appContentBg: '#171a1c',
+    appContentBg: '#22262B',
     appBorderColor: '#5987c1',
 
     textColor: '#fff',
