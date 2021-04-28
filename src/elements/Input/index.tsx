@@ -5,8 +5,8 @@ import { AiOutlineEyeInvisible, AiOutlineEye } from 'react-icons/ai';
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
-  id: string;
-  label: string;
+  id?: string;
+  placeholder: string;
   error?: string;
   icon?: React.ComponentType<IconBaseProps>;
   register?: (e: HTMLInputElement | null) => void;
@@ -18,7 +18,7 @@ export function Input({
   id,
   value,
   error,
-  label,
+  placeholder,
   icon: Icon,
   type,
   register,
@@ -60,7 +60,7 @@ export function Input({
             })}
             htmlFor={id}
           >
-            {label}
+            {placeholder}
           </label>
 
           {Icon ? <Icon size={26} className="absolute h-full ml-3" /> : null}

@@ -13,7 +13,7 @@ export function Default() {
     <div className="w-80">
       <Input
         id="taxId"
-        label="Código"
+        placeholder="Código"
         name="taxId"
         value={value}
         onChange={(e) => setValue(e.target.value)}
@@ -28,7 +28,7 @@ export function Icon() {
     <div className="w-80">
       <Input
         id="taxId"
-        label="E-mail"
+        placeholder="E-mail"
         name="taxId"
         value={value}
         icon={AiOutlineUser}
@@ -45,7 +45,7 @@ export function Error() {
     <div className="w-80">
       <Input
         id="taxId"
-        label="Senha"
+        placeholder="Senha"
         name="taxId"
         error="Campo obrigatório"
         value={value}
@@ -64,7 +64,7 @@ export function Password() {
       <Input
         type="password"
         id="taxId"
-        label="Senha"
+        placeholder="Senha"
         name="taxId"
         value={value}
         icon={BiLockAlt}
@@ -86,7 +86,7 @@ export function EffectError() {
       <Input
         type="password"
         id="taxId"
-        label="Senha"
+        placeholder="Senha"
         name="taxId"
         error={error}
         value={value}
