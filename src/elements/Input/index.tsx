@@ -9,7 +9,6 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   placeholder: string;
   error?: string;
   icon?: React.ComponentType<IconBaseProps>;
-  register?: (e: HTMLInputElement | null) => void;
   ref?: React.MutableRefObject<HTMLInputElement | null>;
 }
 
@@ -21,7 +20,6 @@ export function Input({
   placeholder,
   icon: Icon,
   type,
-  register,
   ref,
   ...props
 }: InputProps): JSX.Element {
@@ -34,9 +32,7 @@ export function Input({
 
   return (
     <>
-      <label
-        className={classNames(`input ${error ? 'error' : null}`, className)}
-      >
+      <div className={classNames(`input ${error ? 'error' : null}`, className)}>
         <div className="control">
           <input
             className={`field ${Icon ? 'icon' : null}`}
@@ -44,9 +40,6 @@ export function Input({
             value={value}
             type={type === 'password' ? IconPassword : type}
             ref={(e) => {
-              if (register) {
-                register(e);
-              }
               if (ref) {
                 ref.current = e;
               }
@@ -66,21 +59,19 @@ export function Input({
           {Icon ? <Icon size={26} className="absolute h-full ml-3" /> : null}
 
           {type === 'password' ? (
-            <button
-              type="button"
-              className="absolute h-full right-0 mr-3 focus:outline-none"
+            <label
+              htmlFor={id}
+              className="flex items-center absolute h-full right-0 mr-3 focus:outline-none"
               onClick={handleClick}
             >
               {type === 'password' && !showHide && (
                 <AiOutlineEyeInvisible size={28} />
               )}
               {type === 'password' && showHide && <AiOutlineEye size={28} />}
-            </button>
+            </label>
           ) : null}
         </div>
-        {/* <span className={classNames('error', { 'is-active': !!error })}>
-      </span> */}
-      </label>
+      </div>
       {error ? (
         <span className="text-3xs text-red-100 ml-2 animate-animaTop">
           {error}

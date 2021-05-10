@@ -1,8 +1,8 @@
 import React from 'react';
-import { BiLockAlt } from 'react-icons/bi';
+import { BiLockAlt, BiUserPin } from 'react-icons/bi';
 import { AiOutlineUser } from 'react-icons/ai';
 
-import { Input } from '../../src';
+import { Input, Button } from '../../src';
 
 export default { title: 'Elements/Input' };
 
@@ -71,6 +71,51 @@ export function Password() {
         onChange={(e) => setValue(e.target.value)}
       />
     </div>
+  );
+}
+
+export function InputForm() {
+  const [emailValue, setEmailValue] = React.useState('');
+  const [passwordValue, setPasswordValue] = React.useState('');
+  const [passwordConfirmValue, setPasswordConfirmValue] = React.useState('');
+
+  return (
+    <form className="w-80">
+      <Input
+        type="email"
+        id="email"
+        placeholder="Senha"
+        name="email"
+        value={emailValue}
+        icon={BiUserPin}
+        onChange={(e) => setEmailValue(e.target.value)}
+        className="mb-4"
+      />
+
+      <Input
+        type="password"
+        id="password"
+        placeholder="Senha"
+        name="password"
+        value={passwordValue}
+        icon={BiLockAlt}
+        onChange={(e) => setPasswordValue(e.target.value)}
+        className="mb-4"
+      />
+
+      <Input
+        type="password"
+        id="confirmPassword"
+        placeholder="Confirmar Senha"
+        name="confirmPassword"
+        value={passwordConfirmValue}
+        icon={BiLockAlt}
+        onChange={(e) => setPasswordConfirmValue(e.target.value)}
+        className="mb-4"
+      />
+
+      <Button type="button">Logar</Button>
+    </form>
   );
 }
 
