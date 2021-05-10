@@ -1,5 +1,6 @@
 import React from 'react';
-import { BiLockAlt, BiUserPin } from 'react-icons/bi';
+import { BiLockAlt } from 'react-icons/bi';
+import { MdMailOutline } from 'react-icons/md';
 import { AiOutlineUser } from 'react-icons/ai';
 
 import { Input, Button } from '../../src';
@@ -87,9 +88,9 @@ export function InputForm() {
         placeholder="Senha"
         name="email"
         value={emailValue}
-        icon={BiUserPin}
+        icon={MdMailOutline}
         onChange={(e) => setEmailValue(e.target.value)}
-        className="mb-4"
+        className="mb-5"
       />
 
       <Input
@@ -100,7 +101,7 @@ export function InputForm() {
         value={passwordValue}
         icon={BiLockAlt}
         onChange={(e) => setPasswordValue(e.target.value)}
-        className="mb-4"
+        className="mb-5"
       />
 
       <Input
@@ -111,7 +112,7 @@ export function InputForm() {
         value={passwordConfirmValue}
         icon={BiLockAlt}
         onChange={(e) => setPasswordConfirmValue(e.target.value)}
-        className="mb-4"
+        className="mb-5"
       />
 
       <Button type="button">Logar</Button>
@@ -129,14 +130,39 @@ export function EffectError() {
   return (
     <div className="w-80">
       <Input
+        type="text"
+        id="name"
+        placeholder="Nome"
+        name="name"
+        error={error}
+        value={value}
+        icon={AiOutlineUser}
+        onChange={(e) => setValue(e.target.value)}
+        className="mb-5"
+      />
+
+      <Input
+        type="text"
+        id="email"
+        placeholder="E-mail"
+        name="email"
+        error={error}
+        value={value}
+        icon={MdMailOutline}
+        onChange={(e) => setValue(e.target.value)}
+        className="mb-5"
+      />
+
+      <Input
         type="password"
-        id="taxId"
+        id="password"
         placeholder="Senha"
-        name="taxId"
+        name="password"
         error={error}
         value={value}
         icon={BiLockAlt}
         onChange={(e) => setValue(e.target.value)}
+        className="mb-5"
       />
     </div>
   );
