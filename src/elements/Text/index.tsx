@@ -5,7 +5,7 @@ import { Size, Variant } from '../../common';
 export interface TextProps
   extends React.HtmlHTMLAttributes<HTMLParagraphElement> {
   variant?: Variant;
-  size?: Exclude<Size, 'x-large'>;
+  size?: Size;
 }
 
 function Text({

@@ -34,6 +34,18 @@
   @apply text-xl;
 }
 
+@define-mixin text-4xl {
+  @apply text-4xl;
+}
+
+@define-mixin text-2xs {
+  @apply text-2xs;
+}
+
+@define-mixin text-3xs {
+  @apply text-3xs;
+}
+
 @define-mixin responsive-text {
   @mixin text-default;
 
@@ -55,5 +67,17 @@
 
   &.is-x-large {
     @mixin text-x-large;
+  }
+
+  &.is-4xl {
+    @mixin text-4xl;
+  }
+
+  &.is-2xs {
+    @mixin text-2xs;
+  }
+
+  &.is-3xs {
+    @mixin text-3xs;
   }
 }

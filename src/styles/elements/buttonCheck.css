@@ -1,0 +1,8 @@
+.buttonCheck {
+  @apply cursor-pointer h-4 w-4 rounded-full border-2;
+  @apply transition duration-400 focus:outline-none;
+
+  &.done {
+    @apply bg-green-100 border-green-100;
+  }
+}

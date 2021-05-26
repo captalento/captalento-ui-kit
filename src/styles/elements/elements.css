@@ -1,5 +1,10 @@
 @import './button.css';
 @import './title.css';
 @import './text.css';
+@import './buttonCheck.css';
 @import './link.css';
 @import './input.css';
+@import './avatarMenu.css';
+@import './menuDesktop.css';
+@import './menuMobile.css';
+@import './circleProgress.css';

@@ -6,6 +6,9 @@
   &.is-black {
     @apply text-black-200;
   }
+  &.is-gray {
+    @apply text-gray;
+  }
 
   &.is-blue {
     @apply text-blue-100;

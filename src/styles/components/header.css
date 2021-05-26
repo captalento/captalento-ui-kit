@@ -1,53 +1,5 @@
 .header {
-  @apply w-full bg-black-300 flex justify-center;
-
-  .container {
-    @apply max-w-screen-xl w-full px-8 md:px-16 lg:px-48 my-4 flex items-center justify-between;
-  }
-
-  .containerLinks {
-    @apply flex items-center;
-
-    .containerLink {
-      @apply flex flex-col mr-4;
-
-      .link {
-        div {
-          transition: width 0.6s;
-          width: 0px;
-          @apply bg-blue-100 h-0.5 rounded-full;
-        }
-
-        &:hover {
-          div {
-            @apply w-full;
-          }
-        }
-      }
-    }
-  }
-
-  .user {
-    @apply flex items-center;
-
-    .bell {
-      @apply mr-4 text-white-100;
-    }
-
-    img {
-      @apply w-10 rounded-full cursor-pointer relative;
-    }
-
-    .userMenu {
-      @apply bg-white-100 rounded-lg p-4 absolute -bottom-12 right-0 animate-animatop;
-
-      .options {
-        @apply flex fill-current text-blue-dark;
-
-        svg {
-          @apply mr-4;
-        }
-      }
-    }
-  }
+  @apply w-full bg-black-300 flex h-20;
+  @apply items-center justify-between;
+  @apply max-w-screen-xl px-8 md:px-16 lg:px-48;
 }

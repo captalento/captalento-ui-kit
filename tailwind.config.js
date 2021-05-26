@@ -5,7 +5,9 @@ module.exports = {
     extend: {
       transitionDuration: {
         0: '0ms',
-        2000: '2000ms',
+        600: '600ms',
+        400: '400ms',
+        200: '200ms',
       },
 
       spacing: {
@@ -13,14 +15,15 @@ module.exports = {
       },
 
       animation: {
-        animatop: 'animatop 0.4s backwards',
-        animaRigth: 'animaRigth 0.4s backwards',
-        animaShow: 'animaShow 0.3s backwards',
+        animaTop: 'animaTop 0.4s ease-in-out',
+        animaRigth: 'animaRigth 0.4s ease-in-out',
+        animaShow: 'animaShow 0.3s ease-in-out',
+        animaHidden: 'animaHidden 0.3s ease-in-out',
         animaPlaceholderTop: 'animaPlaceholderTop .4s',
       },
 
       keyframes: {
-        animatop: {
+        animaTop: {
           from: {
             opacity: '0',
             transform: 'translateY(-20px)',
@@ -31,7 +34,6 @@ module.exports = {
             transform: 'translateY(0)',
           },
         },
-
         animaRigth: {
           from: {
             opacity: '0',
@@ -51,6 +53,16 @@ module.exports = {
 
           to: {
             transform: 'scale(1)',
+          },
+        },
+
+        animaHidden: {
+          from: {
+            transform: 'scale(1)',
+          },
+
+          to: {
+            transform: 'scale(0)',
           },
         },
 
@@ -112,6 +124,7 @@ module.exports = {
       purple: { 100: '#8964ED', 200: '#5648A3', disabled: '#D6C9F9' },
       blue: { 100: '#64A4ED', 200: '#4A7FA3', disabled: '#C9DFF9' },
       'blue-dark': '#243B55',
+      'blue-dark-hover': '#41596D',
     },
     boxShadow: {
       sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',

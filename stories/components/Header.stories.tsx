@@ -1,72 +1,23 @@
 import React from 'react';
 
-import { HiMenuAlt3 } from 'react-icons/hi';
-import { IoClose } from 'react-icons/io5';
-import { IoExitOutline } from 'react-icons/io5';
-
 import { Header } from '../../src/components';
-import { Link } from '../../src/elements';
-// import perfil from '../../src/assets/perfil.jpeg';
-import { AiOutlineBell, AiOutlineUser } from 'react-icons/ai';
+import {
+  MenuDesktop,
+  Avatar,
+  AvatarMenu,
+  MenuMobile,
+} from '../../src/elements';
+import Perfil from '../../src/assets/perfil.jpeg';
+import { IoClose } from 'react-icons/io5';
+import { CgMenuRight } from 'react-icons/cg';
 
 export default { title: 'Components/Header' };
 
 export function SiteDeslogado() {
-  const [menuActive, setMenuActive] = React.useState(false);
   return (
     <div style={{ width: '1000px' }}>
       <Header>
-        <div className="containerLinks">
-          <div className="containerLink">
-            <div className="link">
-              <Link href="/">Home</Link>
-              <div />
-            </div>
-          </div>
-
-          <div className="containerLink">
-            <div className="link">
-              <Link href="/">Sobre nós</Link>
-              <div />
-            </div>
-          </div>
-
-          <div className="containerLink">
-            <div className="link">
-              <Link href="https://app.captalento.com/register">
-                Cadastre-se
-              </Link>
-              <div />
-            </div>
-          </div>
-
-          <Link
-            href="https://app.captalento.com/login"
-            isButton
-            sizeButton="b-small"
-            variant="blue"
-            className="w-20"
-          >
-            Entrar
-          </Link>
-        </div>
-
-        <button
-          type="button"
-          className={`z-20 focus:outline-none lg:hidden	${
-            menuActive ? 'fixed -right-0 mr-8' : null
-          }`}
-          onClick={() => setMenuActive(!menuActive)}
-        >
-          {menuActive ? (
-            <IoClose size={40} className="text-blue-100 lg:hidden sm:hidden" />
-          ) : (
-            <HiMenuAlt3
-              size={40}
-              className="text-blue-100 lg:hidden sm:hidden"
-            />
-          )}
-        </button>
+        <MenuDesktop />
       </Header>
     </div>
   );
@@ -76,31 +27,7 @@ export function SiteLogado() {
   return (
     <div style={{ width: '1000px' }}>
       <Header>
-        <div className="containerLinks">
-          <div className="containerLink">
-            <div className="link">
-              <Link href="/">Home</Link>
-              <div />
-            </div>
-          </div>
-
-          <div className="containerLink">
-            <div className="link">
-              <Link href="/">Sobre nós</Link>
-              <div />
-            </div>
-          </div>
-
-          <Link
-            href="https://app.captalento.com/login"
-            isButton
-            sizeButton="b-small"
-            variant="blue"
-            className="w-20"
-          >
-            Entrar
-          </Link>
-        </div>
+        <MenuDesktop isLogued />
       </Header>
     </div>
   );
@@ -115,31 +42,82 @@ export function AppDeslogado() {
 }
 
 export function AppLogado() {
-  const [userMenu, setUserMenu] = React.useState(false);
+  const [active, setActive] = React.useState(false);
+
+  const user = {
+    img: {
+      src: Perfil,
+      alt: 'Imagem do usuário',
+    },
+    initiall: 'Y',
+  };
+
   return (
     <div style={{ width: '1000px' }}>
       <Header>
-        <div className="user">
-          <AiOutlineBell size={20} className="bell" />
-          <div
-            className="bg-blue-100 w-8 h-8 rounded-full cursor-pointer"
-            onClick={() => setUserMenu((oldValue) => !oldValue)}
-          />
+        <button
+          onClick={() => setActive(!active)}
+          onBlur={() => setActive(false)}
+          className="focus:outline-none"
+        >
+          <Avatar user={user} className="cursor-pointer relative" />
+        </button>
+        <AvatarMenu
+          isActive={active}
+          className="absolute top-96 right-32 -mt-16"
+        />
+      </Header>
+    </div>
+  );
+}
 
-          {userMenu ? (
-            <div className="userMenu" onBlur={() => setUserMenu(false)}>
-              <div className="options">
-                <AiOutlineUser size={20} />
-                <p>Ver perfil</p>
-              </div>
+export function SiteDeslogadoMobile() {
+  const [menuActive, setMenuActive] = React.useState(false);
 
-              <div className="options">
-                <IoExitOutline size={20} />
-                <p>Sair</p>
-              </div>
-            </div>
-          ) : null}
-        </div>
+  return (
+    <div style={{ width: '414px' }} className="absolute top-0">
+      <Header>
+        <button
+          aria-label={`${menuActive ? 'Abrir' : 'Fechar'} menu`}
+          aria-expanded={menuActive}
+          aria-haspopup={true}
+          onClick={() => setMenuActive(!menuActive)}
+          className="focus:outline-none z-20 text-blue-100 lg:hidden"
+        >
+          {menuActive ? <IoClose size={40} /> : <CgMenuRight size={40} />}
+        </button>
+
+        <MenuDesktop className="hidden lg:block" />
+        <MenuMobile className="lg:hidden" menuActive={menuActive} />
+      </Header>
+    </div>
+  );
+}
+export function AppLogadoMobile() {
+  const [active, setActive] = React.useState(false);
+
+  const user = {
+    img: {
+      src: Perfil,
+      alt: 'Imagem do usuário',
+    },
+    initiall: 'Y',
+  };
+
+  return (
+    <div style={{ width: '414px' }} className="absolute top-0">
+      <Header>
+        <button
+          onClick={() => setActive(!active)}
+          onBlur={() => setActive(false)}
+          className="focus:outline-none"
+        >
+          <Avatar user={user} className="cursor-pointer relative" />
+        </button>
+        <AvatarMenu
+          isActive={active}
+          className="absolute top-20 right-0 pr-16"
+        />
       </Header>
     </div>
   );

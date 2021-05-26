@@ -1,0 +1,35 @@
+.avatarMenu {
+  &.isShow {
+    @apply animate-animaShow transform scale-100;
+  }
+
+  &[class='isShow'] {
+    &.isHidden {
+      @apply animate-animaHidden transform scale-0;
+    }
+  }
+
+  @apply py-5 bg-white-100 rounded-lg text-blue-dark;
+  @apply transition duration-600 ease-in-out transform scale-0;
+
+  div {
+    @apply flex cursor-pointer px-5 py-2.5;
+
+    &:hover {
+      @apply text-blue-dark-hover;
+    }
+
+    svg {
+      @apply mr-4;
+    }
+
+    a,
+    p {
+      @apply font-semibold text-2xs;
+
+      &:hover {
+        @apply text-blue-dark-hover;
+      }
+    }
+  }
+}

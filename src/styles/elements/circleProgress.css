@@ -1,0 +1,39 @@
+.circleProgress {
+  @apply relative w-10 h-10 flex justify-center items-center;
+
+  svg {
+    @apply w-10 h-10 transform -rotate-90;
+
+    circle {
+      fill: #22262b;
+      stroke-linecap: round;
+      stroke-width: 2px;
+      stroke: #64edad;
+      transform: translate(1px, 1px);
+      stroke-dasharray: 113;
+      stroke-dashoffset: 113;
+    }
+
+    & circle:nth-child(1) {
+      stroke-dashoffset: 0;
+      stroke: #22262b;
+    }
+
+    & circle:nth-child(2) {
+      transition: stroke 0.3s ease 0s, stroke-dashoffset 0.45s ease 0s;
+    }
+  }
+
+  p {
+    @apply absolute font-extrabold flex;
+    @apply justify-center items-center transition duration-400;
+
+    margin-top: 2px;
+    margin-left: -1.5px;
+
+    .checked {
+      @apply w-7 h-7 transform rotate-0 text-green-100;
+      margin-top: -5px;
+    }
+  }
+}
