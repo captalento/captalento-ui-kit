@@ -1,8 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import LogoDesktop from '../../assets/logo-desktop.svg';
-import LogoMobile from '../../assets/logo-mobile.svg';
+import LogoDesktop from '../../assets/LogoDesktop';
+import LogoMobile from '../../assets/LogoMobile';
 import { Link } from '@reach/router';
 
 export interface headerProps {
@@ -24,8 +24,8 @@ function Header({ className, application = 'app', children }: headerProps) {
         }
         className="cursor-pointer z-20"
       >
-        <img src={LogoDesktop} className="hidden lg:block h-8" />
-        <img src={LogoMobile} className="block lg:hidden h-8" />
+        <LogoDesktop className="hidden lg:block h-8" />
+        <LogoMobile className="block lg:hidden h-8" />
       </Link>
 
       {children}
