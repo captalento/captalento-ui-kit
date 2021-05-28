@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import React, { HTMLAttributes } from 'react';
-import { Text, Title } from '../../elements';
+import { LineProgress, Text, Title } from '../../elements';
 import { Module } from './Module/Module';
 
 export interface PropsCourse extends HTMLAttributes<HTMLDivElement> {
@@ -25,16 +25,12 @@ function Course({
         <Text size="3xs" variant="gray">
           {place}
         </Text>
+
         <Title size="small" tag="h3">
           {name}
         </Title>
-        <div className="percentageCourse">
-          <div className="barrProgress">
-            <div />
-            <div style={{ width: `${percentageCourse}%` }} />
-          </div>
-          <Text size="3xs">{percentageCourse}%</Text>
-        </div>
+
+        <LineProgress completionPercentage={percentageCourse} />
       </div>
 
       {children}

@@ -9,3 +9,4 @@ export * from './MenuDesktop';
 export * from './ButtonCheck';
 export * from './MenuMobile';
 export * from './CircleProgress';
+export * from './LineProgress';
