@@ -29,6 +29,10 @@
     @apply text-3xs;
   }
 
+  input::placeholder {
+    @apply text-transparent hidden;
+  }
+
   .control {
     @apply relative;
     @apply flex flex-1 flex-col justify-end;
