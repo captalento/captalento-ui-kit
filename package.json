@@ -1,6 +1,6 @@
 {
   "name": "captalento-system-ui",
-  "version": "2.7.0",
+  "version": "2.7.1",
   "author": "Isaias Mendes",
   "description": "Componentes do site captalento",
   "main": "dist/index.js",
@@ -54,10 +54,10 @@
     }
   ],
   "dependencies": {
+    "@svgr/webpack": "^5.5.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^13.1.9",
-    "@svgr/webpack": "^5.5.0",
     "loki": "0.28.1",
     "polished": "^4.1.1",
     "react-dom": "^17.0.1",
