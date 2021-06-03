@@ -35,6 +35,7 @@ export function Input({
       <div className="control">
         <input
           className={`field ${Icon ? 'icon' : null}`}
+          placeholder={placeholder}
           id={id}
           value={value}
           type={type === 'password' ? IconPassword : type}
