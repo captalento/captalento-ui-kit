@@ -1,11 +1,10 @@
 import React from 'react';
 
 import { IconBaseProps } from 'react-icons';
-import { Link, navigate } from '@reach/router';
+import { Link } from '@reach/router';
 import classNames from 'classnames';
 import { Text } from '../Text';
 import { AiOutlineUser } from 'react-icons/ai';
-import { BiExit } from 'react-icons/bi';
 
 export interface NewOption {
   icon: React.ComponentType<IconBaseProps> | null;
@@ -31,17 +30,8 @@ function AvatarMenu({
     className
   );
 
-  const goUserProfile = React.useCallback(() => {
-    navigate('https://app.captalento.com/user');
-  }, []);
-
   const [options, setOptions] = React.useState<Array<NewOption>>([
-    { icon: AiOutlineUser, message: 'Ver perfil', funcEvent: goUserProfile },
-    {
-      icon: BiExit,
-      message: 'Sair',
-      route: 'https://app.captalento.com/login',
-    },
+    { icon: AiOutlineUser, message: 'Ver perfil', route: '/user/profile' },
   ]);
 
   React.useEffect(() => {

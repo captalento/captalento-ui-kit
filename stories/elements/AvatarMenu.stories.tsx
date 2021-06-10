@@ -1,6 +1,6 @@
 import { navigate } from '@reach/router';
 import React from 'react';
-import { BiMovie } from 'react-icons/bi';
+import { BiExit, BiMovie } from 'react-icons/bi';
 
 import { AvatarMenu, Button } from '../../src';
 
@@ -34,9 +34,9 @@ export function SomeOption() {
   const [active, setActive] = React.useState(false);
 
   const option = {
-    icon: BiMovie,
-    message: 'Meu cursos',
-    funcEvent: handeleClick,
+    icon: BiExit,
+    message: 'Sair',
+    route: 'https://app.captalento.com/login',
   };
 
   return (
