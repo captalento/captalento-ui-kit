@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { IconBaseProps } from 'react-icons';
-import { Link, navigate } from '@reach/router';
+import { Link } from '@reach/router';
 import classNames from 'classnames';
 import { Text } from '../Text';
 import { AiOutlineUser } from 'react-icons/ai';
@@ -32,9 +32,16 @@ function AvatarMenu({
   );
 
   const goUserProfile = React.useCallback(() => {
-    localStorage.removeItem('@captalento:token');
-    document.cookie =
-      'app-access-token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    sessionStorage.removeItem('@captalento:token');
+
+    const cookies = document.cookie.split(';');
+
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i];
+      const eqPos = cookie.indexOf('=');
+      const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+      document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT';
+    }
   }, []);
 
   const [options, setOptions] = React.useState<Array<NewOption>>([
