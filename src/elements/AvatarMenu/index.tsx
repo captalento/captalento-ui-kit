@@ -1,10 +1,11 @@
 import React from 'react';
 
 import { IconBaseProps } from 'react-icons';
-import { Link } from '@reach/router';
+import { Link, navigate } from '@reach/router';
 import classNames from 'classnames';
 import { Text } from '../Text';
 import { AiOutlineUser } from 'react-icons/ai';
+import { BiExit } from 'react-icons/bi';
 
 export interface NewOption {
   icon: React.ComponentType<IconBaseProps> | null;
@@ -30,8 +31,20 @@ function AvatarMenu({
     className
   );
 
+  const goUserProfile = React.useCallback(() => {
+    localStorage.removeItem('@captalento:token');
+    document.cookie =
+      'app-access-token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+  }, []);
+
   const [options, setOptions] = React.useState<Array<NewOption>>([
     { icon: AiOutlineUser, message: 'Ver perfil', route: '/user/profile' },
+    {
+      icon: BiExit,
+      message: 'Sair',
+      route: '/login',
+      funcEvent: goUserProfile,
+    },
   ]);
 
   React.useEffect(() => {

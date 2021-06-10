@@ -25,7 +25,7 @@
 
     a,
     p {
-      @apply font-semibold text-2xs;
+      @apply font-semibold text-blue-dark text-2xs;
 
       &:hover {
         @apply text-blue-dark-hover;
