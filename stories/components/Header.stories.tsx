@@ -49,7 +49,7 @@ export function AppLogado() {
       src: Perfil,
       alt: 'Imagem do usuário',
     },
-    initiall: 'Y',
+    initial: 'Y',
   };
 
   return (
@@ -101,7 +101,7 @@ export function AppLogadoMobile() {
       src: Perfil,
       alt: 'Imagem do usuário',
     },
-    initiall: 'Y',
+    initial: 'Y',
   };
 
   return (

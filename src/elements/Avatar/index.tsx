@@ -5,7 +5,7 @@ import { FaUser } from 'react-icons/fa';
 import { Size } from '../../common';
 
 interface User {
-  initiall: string;
+  initial: string;
   img: {
     src: string | undefined;
     alt: string;
@@ -19,7 +19,7 @@ export interface PropsAvatar extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 function Avatar({ user, sizeText, sizeIcon, className, ...rest }: PropsAvatar) {
-  const { img, initiall } = user;
+  const { img, initial } = user;
   const [isLoaded, setIsLoaded] = React.useState<boolean>(false);
 
   return (
@@ -29,11 +29,11 @@ function Avatar({ user, sizeText, sizeIcon, className, ...rest }: PropsAvatar) {
           {...rest}
           className={`${className} w-12 h-12 flex justify-center items-center rounded-full bg-black-100`}
         >
-          {!img.src && !initiall ? (
+          {!img.src && !initial ? (
             <FaUser size={sizeIcon} className="text-green-100" />
           ) : (
             <Text variant="green" size={sizeText} className={`font-semibold`}>
-              {initiall}
+              {initial}
             </Text>
           )}
         </div>

@@ -12,7 +12,7 @@ export function WhiteImg() {
       src: Perfil,
       alt: 'Imagem do usuário',
     },
-    initiall: 'Y',
+    initial: 'Y',
   };
 
   return <Avatar user={user} />;
@@ -24,19 +24,19 @@ export function withoutImg() {
       src: '',
       alt: 'Imagem do usuário',
     },
-    initiall: 'Y',
+    initial: 'Y',
   };
 
   return <Avatar user={user} />;
 }
 
-export function withoutImgAndInitiall() {
+export function withoutImgAndinitial() {
   const user = {
     img: {
       src: '',
       alt: 'Imagem do usuário',
     },
-    initiall: '',
+    initial: '',
   };
 
   return <Avatar user={user} />;
@@ -48,7 +48,7 @@ export function otherSize() {
       src: '',
       alt: 'Imagem do usuário',
     },
-    initiall: 'Y',
+    initial: 'Y',
   };
 
   const user2 = {
@@ -56,7 +56,7 @@ export function otherSize() {
       src: '',
       alt: 'Imagem do usuário',
     },
-    initiall: '',
+    initial: '',
   };
 
   return (
@@ -76,7 +76,7 @@ export function WhiteImgAndEvent() {
       src: Perfil,
       alt: 'Imagem do usuário',
     },
-    initiall: 'Y',
+    initial: 'Y',
   };
 
   return (
