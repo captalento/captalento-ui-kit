@@ -1,0 +1,72 @@
+.cardCourse {
+  @apply bg-black-100 rounded-2xl outline-none focus:outline-none;
+  width: 300px;
+
+  .video {
+    @apply bg-blue-100 w-full rounded-t-2xl;
+    height: 180px;
+
+    .containerMask {
+      @apply absolute top-0 w-full;
+      height: 180px;
+      overflow: hidden;
+
+      &:hover {
+        .mask {
+          margin-top: 180px;
+        }
+      }
+      .mask {
+        @apply bg-blue-100 w-full rounded-t-2xl absolute top-0 z-10;
+        height: 180px;
+
+        transition: margin 0.4s;
+        -moz-transition: margin 0.4s;
+        -ms-transition: margin 0.4s;
+        -o-transition: margin 0.4s;
+        -webkit-transition: margin 0.4s;
+
+        background: -webkit-linear-gradient(
+          180deg,
+          #edeff9 0%,
+          rgba(196, 196, 196, 0) 0.01%,
+          #3b4147 100%
+        );
+        background: -moz-linear-gradient(
+          180deg,
+          #edeff9 0%,
+          rgba(196, 196, 196, 0) 0.01%,
+          #3b4147 100%
+        );
+        background: -o-linear-gradient(
+          180deg,
+          #edeff9 0%,
+          rgba(196, 196, 196, 0) 0.01%,
+          #3b4147 100%
+        );
+        background: linear-gradient(
+          180deg,
+          #edeff9 0%,
+          rgba(196, 196, 196, 0) 0.01%,
+          #3b4147 100%
+        );
+
+        background-size: auto;
+      }
+    }
+  }
+
+  .teacherAvatar {
+    @apply flex justify-center items-center rounded-full;
+    background: linear-gradient(180deg, #64edad 0%, #8964ed 100%);
+    width: 68px;
+    margin-top: -34px;
+    height: 68px;
+
+    img {
+      @apply rounded-full;
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
