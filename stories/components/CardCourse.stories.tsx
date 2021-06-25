@@ -16,3 +16,32 @@ export function Default() {
     />
   );
 }
+
+export function CardStart() {
+  return (
+    <CardCourse
+      video={<div className="w-full h-full rounded-t-2xl bg-red-100">Bone</div>}
+      teacherImg={Perfil}
+      teacherName="Ygor Mendes"
+      courseName="HTML 5"
+      courseLevel="Básico"
+      courseDuration={1.3}
+      courseStart={true}
+    />
+  );
+}
+
+export function CardProgress() {
+  return (
+    <CardCourse
+      video={<div className="w-full h-full rounded-t-2xl bg-red-100">Bone</div>}
+      teacherImg={Perfil}
+      teacherName="Ygor Mendes"
+      courseName="HTML 5"
+      courseLevel="Básico"
+      courseDuration={1.3}
+      hasStart={true}
+      completionPercentage={75}
+    />
+  );
+}
