@@ -17,11 +17,15 @@
     &.is-square {
       @apply transform rotate-45;
     }
+
+    &.is-none {
+      @apply hidden;
+    }
   }
 
   .line {
     @mixin bg-variants;
 
-    @apply w-36	h-0.5 rounded-r-full;
+    @apply w-full	h-0.5 rounded-full;
   }
 }
