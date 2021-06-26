@@ -122,3 +122,12 @@ export function AppLogadoMobile() {
     </div>
   );
 }
+
+export function paddins() {
+  return (
+    <div style={{ width: '414px' }} className="absolute top-0">
+      <Header />
+      <Header application="site" />
+    </div>
+  );
+}
