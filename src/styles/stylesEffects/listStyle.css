@@ -1,0 +1,27 @@
+.listStyle {
+  @apply w-2.5 h-2.5 border-2 transform rotate-45;
+
+  &.is-black {
+    @apply border-black-100;
+  }
+
+  &.is-blue {
+    @apply border-blue-100;
+  }
+
+  &.is-green {
+    @apply border-green-100;
+  }
+
+  &.is-white {
+    @apply border-white-100;
+  }
+
+  &.is-purple {
+    @apply border-purple-100;
+  }
+
+  &.is-red {
+    @apply border-red-100;
+  }
+}
