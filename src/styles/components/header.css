@@ -1,5 +1,5 @@
 .header {
   @apply w-full flex h-20;
   @apply items-center justify-between;
-  @apply max-w-screen-xl px-8 md:px-16 lg:px-48;
+  @apply max-w-screen-xl px-8 md:px-16;
 }

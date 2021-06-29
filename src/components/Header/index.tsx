@@ -16,7 +16,11 @@ function Header({ className, application = 'app', children }: headerProps) {
 
   return (
     <header className="w-full flex justify-center bg-black-300">
-      <div className={classes}>
+      <div
+        className={`${classes} ${
+          application === 'app' ? 'lg:px-20' : 'lg:px-48'
+        } `}
+      >
         <Link
           to={application === 'app' ? '/home' : '/'}
           className="cursor-pointer z-20"
