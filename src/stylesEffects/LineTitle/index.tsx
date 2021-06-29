@@ -4,7 +4,7 @@ import { Variant } from '../../common';
 
 export interface LineTitleProps extends HTMLAttributes<HTMLDivElement> {
   variant?: Variant;
-  shape?: 'circle' | 'square';
+  shape?: 'circle' | 'square' | 'none';
   outlined?: boolean;
 }
 

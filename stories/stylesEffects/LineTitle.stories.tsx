@@ -25,9 +25,20 @@ export function OtherShape() {
 export function Outlined() {
   return (
     <div>
-      <Title tag="h1">captalento</Title>
-      <LineTitle variant="blue" outlined className="mb-4" />
-      <LineTitle variant="blue" shape="circle" outlined />
+      <div>
+        <Title tag="h1">captalento</Title>
+        <LineTitle variant="blue" outlined className="mb-4" />
+      </div>
+
+      <div>
+        <Title tag="h1">captalento</Title>
+        <LineTitle variant="blue" shape="circle" outlined />
+      </div>
+
+      <div>
+        <Title tag="h1">captalento</Title>
+        <LineTitle variant="blue" shape="none" outlined />
+      </div>
     </div>
   );
 }
