@@ -4,22 +4,28 @@ import { Text } from '../Text';
 import { FaUser } from 'react-icons/fa';
 import { Size } from '../../common';
 
-interface User {
-  initial: string;
+export interface PropsAvatar extends React.HTMLAttributes<HTMLDivElement> {
+  initial?: string;
   img: {
     src: string | undefined;
     alt: string;
   };
-}
-
-export interface PropsAvatar extends React.HTMLAttributes<HTMLDivElement> {
-  user: User;
+  borderDecoration?: boolean;
   sizeText?: Size;
   sizeIcon?: number;
+  size?: number;
 }
 
-function Avatar({ user, sizeText, sizeIcon, className, ...rest }: PropsAvatar) {
-  const { img, initial } = user;
+function Avatar({
+  initial,
+  img,
+  size,
+  sizeText,
+  sizeIcon,
+  borderDecoration,
+  className,
+  ...rest
+}: PropsAvatar) {
   const [isLoaded, setIsLoaded] = React.useState<boolean>(false);
 
   return (
@@ -38,14 +44,26 @@ function Avatar({ user, sizeText, sizeIcon, className, ...rest }: PropsAvatar) {
           )}
         </div>
       ) : (
-        <img
-          src={img.src}
-          alt={img.alt}
-          className={`${className} w-12 rounded-full`}
-          onError={() => setIsLoaded(true)}
-          onLoad={() => setIsLoaded(false)}
-          {...rest}
-        />
+        <div
+          style={
+            size
+              ? { width: `${size * 1.115}px`, height: `${size * 1.115}px` }
+              : undefined
+          }
+          className={`${borderDecoration ? 'borderDecoration' : null}`}
+        >
+          <img
+            style={
+              size ? { width: `${size}px`, height: `${size}px` } : undefined
+            }
+            src={img.src}
+            alt={img.alt}
+            className={`${className} w-12 rounded-full`}
+            onError={() => setIsLoaded(true)}
+            onLoad={() => setIsLoaded(false)}
+            {...rest}
+          />
+        </div>
       )}
     </>
   );

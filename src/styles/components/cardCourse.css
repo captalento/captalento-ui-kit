@@ -55,18 +55,4 @@
       }
     }
   }
-
-  .teacherAvatar {
-    @apply flex justify-center items-center rounded-full;
-    background: linear-gradient(180deg, #64edad 0%, #8964ed 100%);
-    width: 68px;
-    margin-top: -34px;
-    height: 68px;
-
-    img {
-      @apply rounded-full;
-      width: 60px;
-      height: 60px;
-    }
-  }
 }
