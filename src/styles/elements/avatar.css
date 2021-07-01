@@ -1,0 +1,6 @@
+.borderDecoration {
+  @apply flex justify-center items-center rounded-full;
+  background: linear-gradient(180deg, #64edad 0%, #8964ed 100%);
+  width: 56px;
+  height: 56px;
+}
