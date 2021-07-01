@@ -7,63 +7,40 @@ import Perfil from '../../src/assets/perfil.jpeg';
 export default { title: 'Elements/Avatar' };
 
 export function WhiteImg() {
-  const user = {
-    img: {
-      src: Perfil,
-      alt: 'Imagem do usuário',
-    },
-    initial: 'Y',
-  };
-
-  return <Avatar user={user} />;
+  return <Avatar img={{ src: Perfil, alt: 'Imagem do usuário' }} />;
 }
 
 export function withoutImg() {
-  const user = {
-    img: {
-      src: '',
-      alt: 'Imagem do usuário',
-    },
-    initial: 'Y',
-  };
-
-  return <Avatar user={user} />;
+  return <Avatar img={{ src: '', alt: 'Imagem do usuário' }} initial="Y" />;
 }
 
-export function withoutImgAndinitial() {
-  const user = {
-    img: {
-      src: '',
-      alt: 'Imagem do usuário',
-    },
-    initial: '',
-  };
-
-  return <Avatar user={user} />;
+export function withoutIcon() {
+  return <Avatar img={{ src: '', alt: 'Imagem do usuário' }} />;
 }
 
 export function otherSize() {
-  const user = {
-    img: {
-      src: '',
-      alt: 'Imagem do usuário',
-    },
-    initial: 'Y',
-  };
-
-  const user2 = {
-    img: {
-      src: '',
-      alt: 'Imagem do usuário',
-    },
-    initial: '',
-  };
-
   return (
     <>
-      <Avatar user={user} sizeText="4xl" className="w-32 h-32 mb-8" />
-      <Avatar user={user2} sizeIcon={56} className="w-32 h-32" />
-      <div></div>
+      <Avatar img={{ src: Perfil, alt: 'Imagem do usuário' }} size={120} />
+      <Avatar
+        img={{ src: '', alt: 'Imagem do usuário' }}
+        initial="Y"
+        sizeIcon={56}
+        sizeText="4xl"
+        className="w-48 h-48"
+      />
+    </>
+  );
+}
+
+export function withBorderStyle() {
+  return (
+    <>
+      <Avatar
+        img={{ src: Perfil, alt: 'Imagem do usuário' }}
+        borderDecoration
+        size={80}
+      />
     </>
   );
 }
@@ -71,18 +48,10 @@ export function otherSize() {
 export function WhiteImgAndEvent() {
   const [active, setActive] = React.useState(false);
 
-  const user = {
-    img: {
-      src: Perfil,
-      alt: 'Imagem do usuário',
-    },
-    initial: 'Y',
-  };
-
   return (
     <>
       <Avatar
-        user={user}
+        img={{ src: Perfil, alt: 'Imagem do usuário' }}
         className="cursor-pointer"
         onClick={() => setActive(!active)}
       />
