@@ -9,6 +9,13 @@ module.exports = {
         400: '400ms',
         200: '200ms',
       },
+      gridTemplateColumns: {
+        1: 'repeat(1, auto)',
+        2: 'repeat(2, auto)',
+        3: 'repeat(3, auto)',
+        4: 'repeat(4, auto)',
+        5: 'repeat(5, auto)',
+      },
 
       spacing: {
         13: '3.375rem', // 50px
