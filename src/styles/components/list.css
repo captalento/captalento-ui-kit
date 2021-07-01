@@ -1,0 +1,7 @@
+.list {
+  @apply grid;
+
+  li {
+    @apply flex items-center text-white-100;
+  }
+}

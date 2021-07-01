@@ -1,5 +1,15 @@
 .listStyle {
-  @apply w-2.5 h-2.5 border-2 transform rotate-45;
+  &.is-square {
+    @apply w-2.5 h-2.5 border-2 transform rotate-45;
+  }
+
+  &.is-circle {
+    @apply w-3 h-3 border-2 rounded-full;
+  }
+
+  &.is-none {
+    @apply hidden;
+  }
 
   &.is-black {
     @apply border-black-100;
