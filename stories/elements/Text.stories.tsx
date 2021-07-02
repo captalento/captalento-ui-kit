@@ -26,13 +26,17 @@ export function Color() {
   );
 }
 
-export function OtherSize() {
+export function OtherSizes() {
   return (
-    <Text size="large">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-      blanditiis nostrum soluta nulla quisquam enim iure impedit et delectus
-      facere aut, fugiat doloribus quos corrupti perferendis rem quasi expedita
-      dolore?
-    </Text>
+    <div className="grid gap-y-4">
+      <Text size="4xl">captalento</Text>
+      <Text size="x-large">captalento</Text>
+      <Text size="large">captalento</Text>
+      <Text size="medium">captalento</Text>
+      <Text size="small">captalento</Text>
+      <Text size="x-small">captalento</Text>
+      <Text size="2xs">captalento</Text>
+      <Text size="3xs">captalento</Text>
+    </div>
   );
 }

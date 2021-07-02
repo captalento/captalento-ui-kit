@@ -6,7 +6,7 @@ export interface TitleProps
   extends React.HtmlHTMLAttributes<HTMLHeadingElement> {
   tag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   icon?: string;
-  size?: Exclude<Size, 'x-large'>;
+  size?: Size;
   variant?: Variant;
 }
 
