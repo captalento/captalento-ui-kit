@@ -26,11 +26,9 @@ function Avatar({
   className,
   ...rest
 }: PropsAvatar) {
-  const [isLoaded, setIsLoaded] = React.useState<boolean>(false);
-
   return (
     <>
-      {isLoaded ? (
+      {!img.src ? (
         <div
           {...rest}
           className={`${className} w-12 h-12 flex justify-center items-center rounded-full bg-black-100`}
@@ -43,7 +41,9 @@ function Avatar({
             </Text>
           )}
         </div>
-      ) : (
+      ) : null}
+
+      {img.src ? (
         <div
           style={
             size
@@ -59,12 +59,10 @@ function Avatar({
             src={img.src}
             alt={img.alt}
             className={`${className} w-12 rounded-full`}
-            onError={() => setIsLoaded(true)}
-            onLoad={() => setIsLoaded(false)}
             {...rest}
           />
         </div>
-      )}
+      ) : null}
     </>
   );
 }
