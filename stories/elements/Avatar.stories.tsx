@@ -11,15 +11,15 @@ export function WhiteImg() {
   return <Avatar img={{ src: Perfil, alt: 'Imagem do usuário' }} />;
 }
 
-export function withInitial() {
+export function WithInitial() {
   return <Avatar img={{ src: '', alt: 'Imagem do usuário' }} initial="Y" />;
 }
 
-export function withIcon() {
+export function WithIcon() {
   return <Avatar img={{ src: '', alt: 'Imagem do usuário' }} />;
 }
 
-export function otherSize() {
+export function OtherSize() {
   return (
     <>
       <Avatar img={{ src: Perfil, alt: 'Imagem do usuário' }} size={120} />
@@ -34,7 +34,7 @@ export function otherSize() {
   );
 }
 
-export function withBorderStyle() {
+export function WithBorderStyle() {
   return (
     <>
       <Avatar
